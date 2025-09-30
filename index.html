@@ -64,6 +64,26 @@
 </head>
 <body class="text-gray-800">
 
+    <!-- Képgaléria szekció (Karusszel) -->
+    <section class="relative w-full carousel-container shadow-2xl">
+        <div id="slider-container" class="w-full h-full"> 
+            <!-- A képek a JavaScript-tel generálódnak ide -->
+        </div>
+
+        <!-- Navigációs gombok (Előző/Következő) -->
+        <button onclick="changeSlide(-1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition z-10 focus:outline-none">
+            &#10094;
+        </button>
+        <button onclick="changeSlide(1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition z-10 focus:outline-none">
+            &#10095;
+        </button>
+
+        <!-- Indikátorok (Pöttyök) -->
+        <div id="slider-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
+            <!-- A pöttyök a JS-szel generálódnak ide -->
+        </div>
+    </section>
+
     <!-- Nyelvválasztó (Language Switcher) -->
     <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
         <!-- Földgömb ikon (Toggle Button) -->
@@ -87,7 +107,6 @@
         </div>
     </div>
 
-
     <!-- Fő szekció / Címsor -->
     <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -108,25 +127,6 @@
         </div>
     </header>
 
-    <!-- Képgaléria szekció (Karusszel) - EZ AZ A SZEKCIÓ, AMIT FELÜLRE HELYEZTÜNK -->
-    <section class="relative w-full carousel-container shadow-2xl">
-        <div id="slider-container" class="w-full h-full"> 
-            <!-- A képek a JavaScript-tel generálódnak ide -->
-        </div>
-
-        <!-- Navigációs gombok (Előző/Következő) -->
-        <button onclick="changeSlide(-1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition z-10 focus:outline-none">
-            &#10094;
-        </button>
-        <button onclick="changeSlide(1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition z-10 focus:outline-none">
-            &#10095;
-        </button>
-
-        <!-- Indikátorok (Pöttyök) -->
-        <div id="slider-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
-            <!-- A pöttyök a JS-szel generálódnak ide -->
-        </div>
-    </section>
 
     <!-- Ár szekció -->
     <section class="py-12 bg-white border-t border-b border-gray-200">
@@ -185,7 +185,7 @@
         
         <div class="md:grid md:grid-cols-2 md:gap-12">
             <div>
-                <h3 class="text-2xl font-semibold mb-3">A melléképület – vállalkozásra is ideális</h3>
+                <h3 class="text-2xl font-semibold mb-3">A Melléképület – Vállalkozásra is ideális</h3>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
                     <li>**100 m² alapterület**, dupla garázs elektromos kapuval, dupla tetőbeállás.</li>
                     <li>2 hobbiszoba, WC, zuhanyzó, tároló és **műhely ipari árammal (három fázissal)**.</li>
@@ -224,7 +224,7 @@
         <!-- Részletes leírás - Emelet -->
         <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-500 mt-8">
             <h3 class="text-2xl font-bold text-indigo-700 mb-4">Emelet / Tetőtér (110 m²)</h3>
-            <p class="text-lg mb-4 italic">Közel **50 m² egybefüggő nappali** padlófűtéssel, klímával és kandallóval.</p>
+            <p class="text-lg mb-4 italic">Közel **50 m² egybefüggő nappali** padlófűtéssel, klímával és kandallóval.</p>            
             <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
                 <li class="p-2 border-b">Nappali: kb. 50 m², klíma, kandalló, padlófűtés.</li>
                 <li class="p-2 border-b">**Mini télikert erkély** fantasztikus kilátással a Budai hegyekre és a Szabadság szoborra.</li>
@@ -457,6 +457,8 @@
         // Karusszel inicializálása
         window.addEventListener('load', () => {
             initCarousel();
+            // Kezdeti parallax eltolás beállítása
+            handleParallax();
         });
     </script>
 </body>
