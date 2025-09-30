@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEGENGEDHETŐ LUXUS REZSI NÉLKÜL - Budapest XVIII. kerület</title>
+    <title>ELÉRHETŐ LUXUS KIS REZSIVEL - Budapest XVIII. kerület</title>
     <!-- Load Tailwind CSS for quick, responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -39,7 +39,7 @@
             object-position: center; /* Image centered */
         }
 
-        /* Styles for FADE EFFECT */
+        /* Styles for FADE EFFECT (ÁTTŰNÉS HATÁS) */
         /* Slider container remains full size, but children are positioned absolutely */
         #slider-container {
             position: relative; 
@@ -47,19 +47,20 @@
             height: 100%;
         }
 
-        /* Individual slide styling for fade */
+        /* Individual slide styling for fade: set position absolute to stack them, and opacity 0 to hide them */
         .slide {
-            position: absolute; /* Stack slides on top of each other */
+            position: absolute; /* A képek egymás fölé kerülnek */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0; /* Hide by default */
-            transition: opacity 1.5s ease-in-out; /* Fade transition duration */
+            opacity: 0; /* Alapértelmezetten elrejtve */
+            transition: opacity 1.5s ease-in-out; /* Áttűnés időtartama */
         }
 
+        /* The active slide is visible (opacity 1), creating the fade transition */
         .slide.active {
-            opacity: 1; /* Show the active slide */
+            opacity: 1; /* Az aktív dia megjelenítése */
         }
     </style>
 </head>
@@ -102,7 +103,7 @@
             <!-- Hungarian (Active language, highlighted) -->
             <a href="index.html" title="Magyar" class="font-bold text-sm px-3 py-1 rounded-lg bg-indigo-600 text-white transition duration-200 hover:bg-indigo-700">HU</a>
             <!-- English -->
-            <a href="GB.html" title="Angol" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
+            <a href="en.html" title="Angol" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
             <!-- German -->
             <a href="de.html" title="Német" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
         </div>
@@ -112,7 +113,7 @@
     <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
-                <span class="highlight-text">MEGENGEDHETŐ LUXUS</span> REZSI NÉLKÜL
+                <span class="highlight-text">ELÉRHETŐ LUXUS</span> KIS REZSIVEL
             </h1>
             <p class="text-xl sm:text-2xl font-light mb-8 max-w-4xl mx-auto">
                 ELADÓ: Magas minőségű, egyedi tervezésű, többgenerációs családi ház, különálló melléképülettel, nagy telekkel és **napelemparkkal**.
@@ -328,10 +329,35 @@
         // Kép URL-ek GitHub-ról
         const images = [
             'https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg',
             'https://raw.githubusercontent.com/Mage1982/Oti/main/3.jpg',
             'https://raw.githubusercontent.com/Mage1982/Oti/main/4.jpg',
             'https://raw.githubusercontent.com/Mage1982/Oti/main/5.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg'
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/7.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/8.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/9.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/11.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/13.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/15.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/16.jpg',
+            // 17.jpg kihagyva a kérésnek megfelelően
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/18.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/20.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/21.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/22.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/23.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/24.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/25.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/26.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/27.jpg',
+            // 28.jpg kihagyva a kérésnek megfelelően
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg',
+            'https://raw.githubusercontent.com/Mage1982/Oti/main/30.jpg'
         ];
         
         let currentSlide = 0;
