@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELÉRHETŐ LUXUS ZÉRÓ REZSIKÖLTSÉGGEL - Budapest XVIII. Kerület</title>
-    <!-- Tailwind CSS betöltése reszponzív, gyors stílusokhoz -->
+    <title>MEGFIZETHETŐ LUXUS NULLA REZSIKÖLTSÉGGEL - Budapest 18. kerület</title>
+    <!-- Tailwind CSS betöltése a gyors, reszponzív stílusozáshoz -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Egyedi stílusok a betűtípushoz és a háttérhez */
+        /* Egyedi stílusok betűtípushoz és háttérhez */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
@@ -19,76 +19,22 @@
         .highlight-text {
             color: #ffcc00; /* Arany/Sárga kiemelés */
         }
-        
-        /* Fix magasság a karusszel konténernek */
-        .carousel-container {
-            height: 300px; /* Alap magasság mobilra */
-            position: relative; 
-            overflow: hidden; 
-        }
-        @media (min-width: 640px) {
-            .carousel-container {
-                height: 500px; /* Magasabb desktop nézeten */
-            }
-        }
-        
-        /* Kép stílusok a Parallax hatáshoz */
-        .slide-image {
+        /* Galéria elemek stílusa */
+        .gallery-item {
+            aspect-ratio: 4/3; /* 4:3 arány a konzisztens megjelenésért */
+            object-fit: cover;
             width: 100%;
-            height: 100%;
-            object-fit: cover; 
-            object-position: center; 
-            will-change: transform; 
-            transition: opacity 1.5s ease-in-out; 
-        }
-
-        /* Stílusok a FADE (átmenetes) effekthez */
-        #slider-container {
-            position: relative; 
-            width: 100%;
-            height: 100%;
-        }
-        .slide {
-            position: absolute; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0; 
-            transition: opacity 1.5s ease-in-out; 
-        }
-        .slide.active {
-            opacity: 1; 
+            height: auto;
         }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Képgaléria szekció (Karusszel) -->
-    <section class="relative w-full carousel-container shadow-2xl">
-        <div id="slider-container" class="w-full h-full"> 
-            <!-- A képek a JavaScript-tel generálódnak ide -->
-        </div>
-
-        <!-- Navigációs gombok (Előző/Következő) -->
-        <button onclick="changeSlide(-1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition z-10 focus:outline-none">
-            &#10094;
-        </button>
-        <button onclick="changeSlide(1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 p-3 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-75 transition z-10 focus:outline-none">
-            &#10095;
-        </button>
-
-        <!-- Indikátorok (Pöttyök) -->
-        <div id="slider-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
-            <!-- A pöttyök a JS-szel generálódnak ide -->
-        </div>
-    </section>
-
-    <!-- Nyelvválasztó (Language Switcher) -->
+    <!-- Nyelvválasztó - A földgömb ikon mögött rejtőzik, kattintásra jelenik meg -->
     <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
-        <!-- Földgömb ikon (Toggle Button) -->
+        <!-- Földgömb Ikon (Kapcsoló Gomb) - SVG IKON -->
         <button id="lang-toggle-btn" title="Nyelv kiválasztása" class="p-3 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
-            <!-- Földgömb SVG ikon -->
+            <!-- Földgömb SVG Ikon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-600">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M12 2a14.5 14.5 0 0 0 0 20"></path>
@@ -96,157 +42,228 @@
             </svg>
         </button>
         
-        <!-- Nyelvek (Kezdetben rejtve) -->
+        <!-- Nyelvválasztók (Kezdetben rejtett) -->
         <div id="lang-flags" class="hidden flex space-x-1 p-2 bg-white rounded-xl shadow-2xl border border-gray-100">
-            <!-- Hungarian (Aktív nyelv, kiemelve) -->
+            <!-- Magyar (Aktív nyelv, kiemelve) -->
             <a href="index.html" title="Magyar" class="font-bold text-sm px-3 py-1 rounded-lg bg-indigo-600 text-white transition duration-200 hover:bg-indigo-700">HU</a>
-            <!-- English -->
-            <a href="GB.html" title="Angol" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
-            <!-- German -->
-            <a href="de.html" title="Német" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
+            <!-- Angol -->
+            <a href="GB.html" title="English" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
+            <!-- Német -->
+            <a href="de.html" title="Deutsch" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
         </div>
     </div>
 
-    <!-- Fő szekció / Címsor -->
+    <!-- Fő szekció / Hős -->
     <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">
-                <span class="highlight-text">ELÉRHETŐ LUXUS</span> ZÉRÓ REZSIKÖLTSÉGGEL
+            <h1 class="text-5xl sm:text-7xl font-black mb-4">
+                <span class="highlight-text">MEGFIZETHETŐ LUXUS</span> NULLA REZSIKÖLTSÉGGEL
             </h1>
-            <p class="text-xl sm:text-2xl font-light mb-8 max-w-4xl mx-auto">
-                ELADÓ: Magas minőségű, egyedi tervezésű, többgenerációs családi ház, különálló melléképülettel, nagy telekkel és **napelemparkkal**.
+            <p class="text-2xl sm:text-3xl font-light mb-8 max-w-4xl mx-auto">
+                ELADÓ: Magas minőségű, több generációs családi ház egyedi elhelyezkedéssel, melléképülettel, nagy kerttel és **napelem rendszerrel**.
             </p>
             <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg">
-                <p class="text-2xl sm:text-4xl font-bold text-gray-900">
+                <p class="text-3xl sm:text-5xl font-black text-gray-900">
                     Budapest, XVIII. kerület, Ganzkertváros
                 </p>
-                <p class="text-lg sm:text-xl font-medium text-gray-700 mt-1">
+                <p class="text-xl sm:text-2xl font-medium text-gray-700 mt-1">
                     5 percre a Liszt Ferenc Nemzetközi Repülőtértől
                 </p>
             </div>
         </div>
     </header>
-
+    
+    <!-- Hős Kép (Kiemelt kép a főoldalon) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-12">
+        <img 
+            src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" 
+            alt="A főépület látképe a kerttel"
+            class="w-full rounded-2xl shadow-2xl border-4 border-white object-cover"
+        />
+    </section>
 
     <!-- Ár szekció -->
     <section class="py-12 bg-white border-t border-b border-gray-200">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-red-600 mb-6">
-                AZ ÖN ÚJ OTTHONA CSAK
+            <h2 class="text-4xl sm:text-6xl font-extrabold text-red-600 mb-6">
+                AZ ÖN ÚJ OTTHONA: CSAK
             </h2>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
                 <div class="p-4 sm:p-6 bg-red-100 rounded-xl shadow-lg">
-                    <p class="text-xl font-semibold text-red-700">ÁR EURÓBAN</p>
-                    <p class="text-4xl sm:text-6xl font-black text-red-600">780.000,-</p>
+                    <p class="text-xl font-semibold text-red-700">EURÓ ÁR</p>
+                    <p class="text-5xl sm:text-7xl font-black text-red-600">780.000,-</p>
                 </div>
                 <div class="p-4 sm:p-6 bg-red-100 rounded-xl shadow-lg">
-                    <p class="text-xl font-semibold text-red-700">ÁR FORINTBAN</p>
-                    <p class="text-4xl sm:text-6xl font-black text-red-600">312.000.000,-</p>
+                    <p class="text-xl font-semibold text-red-700">FORINT ÁR</p>
+                    <p class="text-5xl sm:text-7xl font-black text-red-600">312.000.000,-</p>
                 </div>
             </div>
-            <!-- Telefonos CTA -->
+            <!-- Gomb a megadott telefonszámra -->
             <a href="tel:+36204668282" class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                ÉRDEKLŐDÉS: +36 20 466 8282
+                ÉRDEKLŐDJÖN MOST: +36 20 466 8282
             </a>
         </div>
     </section>
 
-    <!-- Fő jellemzők áttekintése -->
+    <!-- Képgaléria Szekció -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
+        <h2 class="text-5xl font-extrabold text-center text-indigo-700 mb-10">
+            Galéria: Pillantás az Ön új otthonába
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            
+            <!-- Kép 1: Főépület külső -->
+            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <img 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" 
+                    alt="A ház külső nézete" 
+                    class="gallery-item"
+                />
+            </div>
+            
+            <!-- Kép 2: Nappali kandallóval -->
+            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <img 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" 
+                    alt="Földszinti nappali beépített kandallóval" 
+                    class="gallery-item"
+                />
+            </div>
+
+            <!-- Kép 3: Modern konyha -->
+            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <img 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" 
+                    alt="Modern Miele konyha padlófűtéssel" 
+                    class="gallery-item"
+                />
+            </div>
+
+            <!-- Kép 4: Melléképület és garázs -->
+            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <img 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" 
+                    alt="A 100 nm-es melléképület dupla garázzsal" 
+                    class="gallery-item"
+                />
+            </div>
+
+            <!-- Kép 5: Kert és pavilon -->
+            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <img 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" 
+                    alt="Buja kert pavilonnal" 
+                    class="gallery-item"
+                />
+            </div>
+
+            <!-- Kép 6: Napelemes rendszer -->
+            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                <img 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg" 
+                    alt="A 12 kWh-s napelem rendszer a tetőn" 
+                    class="gallery-item"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Fő Jellemzők Áttekintése -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-3xl font-bold text-center mb-12">Főbb jellemzők és extrák</h2>
+        <h2 class="text-4xl font-bold text-center mb-12">Főbb Jellemzők és Kényelmi Extrák</h2>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <!-- Card 1: Többgenerációs -->
+            <!-- Kártya 1: Több Generációs -->
             <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-indigo-600">
-                <h3 class="text-xl font-semibold mb-2">Többgenerációs elrendezés</h3>
-                <p class="text-gray-600">Két teljesen különálló lakrészként használható, összesen **220 m²** lakóterület, a XVIII. kerület legcsendesebb utcájában.</p>
+                <h3 class="text-xl font-semibold mb-2">Több Generációs Életforma</h3>
+                <p class="text-gray-600">Két külön lakóegységként is használható, összesen **220 nm** lakótér, a 18. kerület legcsendesebb utcájában.</p>
             </div>
-            <!-- Card 2: Alacsony rezsi -->
+            <!-- Kártya 2: Alacsony Rezsi -->
             <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
-                <h3 class="text-xl font-semibold mb-2">Zéró rezsiköltség</h3>
-                <p class="text-gray-600">Fűtés, hűtés **12 kWh-s szolárparkkal** megoldva. **7 év szaldó elszámolási** (visszatáplálási) jogosultság még hátra van!</p>
+                <h3 class="text-xl font-semibold mb-2">Nulla Rezsi</h3>
+                <p class="text-gray-600">Fűtést és hűtést a **12 kWh-s napelem park** biztosítja. **7 év szaldós elszámolás** még hátra van!</p>
             </div>
-            <!-- Card 3: Telek és melléképület -->
+            <!-- Kártya 3: Telek és Melléképület -->
             <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
-                <h3 class="text-xl font-semibold mb-2">Hatalmas telek és melléképület</h3>
-                <p class="text-gray-600">Több mint **1300 m² telek**. Különálló, nagy, **100 m²-es melléképület** és dupla garázs is tartozik hozzá.</p>
+                <h3 class="text-xl font-semibold mb-2">Óriási Telek és Garázs</h3>
+                <p class="text-gray-600">Több mint **1300 nm-es telek**. Speciális kb. **100 nm-es melléképület** dupla garázzsal.</p>
             </div>
-            <!-- Card 4: Szigetelés -->
+            <!-- Kártya 4: Szigetelés -->
             <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
-                <h3 class="text-xl font-semibold mb-2">Prémium szigetelés</h3>
-                <p class="text-gray-600">Teljes **15 cm-es hőszigetelés**, a tetőtér/tető pedig dupla szigetelést kapott.</p>
+                <h3 class="text-xl font-semibold mb-2">Prémium Szigetelés</h3>
+                <p class="text-gray-600">Teljes **15 cm vastag szigetelés**, a tetőtérben dupla szigeteléssel.</p>
             </div>
         </div>
     </section>
 
     <!-- Melléképület és Kert -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-lg shadow-inner mt-12">
-        <h2 class="text-3xl font-bold mb-6 text-indigo-700">Melléképület és Kerti Paradicsom</h2>
+        <h2 class="text-4xl font-bold mb-6 text-indigo-700">Melléképület és Kerti Paradicsom</h2>
         
         <div class="md:grid md:grid-cols-2 md:gap-12">
             <div>
-                <h3 class="text-2xl font-semibold mb-3">A Melléképület – Vállalkozásra is ideális</h3>
+                <h3 class="text-3xl font-bold mb-3">A Melléképület – Ideális Vállalkozásra</h3>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>**100 m² alapterület**, dupla garázs elektromos kapuval, dupla tetőbeállás.</li>
-                    <li>2 hobbiszoba, WC, zuhanyzó, tároló és **műhely ipari árammal (három fázissal)**.</li>
-                    <li>**Kinti bár** kémény bekötéssel.</li>
-                    <li>A **100 m²-es padlástér** lakássá, irodává alakítható.</li>
+                    <li>**100 nm-es alapterület**, elektromos ajtós dupla garázs, dupla ereszkinyúlással.</li>
+                    <li>2 hobbi szoba, pihenő, zuhanyzó, raktár és **műhely ipari árammal**.</li>
+                    <li>**Kerti bár** kémény bekötéssel.</li>
+                    <li>A **100 nm-es tetőtér** lakássá vagy irodává alakítható.</li>
                 </ul>
             </div>
             <div class="mt-8 md:mt-0">
-                <h3 class="text-2xl font-semibold mb-3">Kert és környezet</h3>
+                <h3 class="text-3xl font-bold mb-3">Kert és Környezet</h3>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>**Fúrt kút** kiváló minőségű öntözővízzel.</li>
-                    <li>**16 m² fedett kiülő** és kerti kemence/grillező.</li>
+                    <li>**Fúrt kút** kiváló öntözővíz minőséggel.</li>
+                    <li>**16 nm-es fedett pavilon** és tűzrakó/grillező hely.</li>
                     <li>**2000 literes esővízgyűjtő**.</li>
-                    <li>A kert 90%-ban betonkerítéssel van körülvéve, garantálva a privát szférát.</li>
+                    <li>A kert 90%-ban betonkerítéssel van körülvéve, biztosítva a privát szférát.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Részletes leírás - Földszint -->
+    <!-- Részletes Leírás - Földszint -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-3xl font-bold mb-6 text-center">A Ház Részletes Elrendezése</h2>
+        <h2 class="text-4xl font-bold mb-6 text-center">A Ház Részletes Elrendezése</h2>
         <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-yellow-500">
-            <h3 class="text-2xl font-bold text-yellow-700 mb-4">Földszint (110 m², 2021-ben felújítva)</h3>
-            <p class="text-lg mb-4 italic">A közlekedőből nyíló nyitott étkező, a **beépített kandallós nappali** és a könyvtár/dolgozószoba lélegzetelállító látványt nyújt.</p>
+            <h3 class="text-3xl font-bold text-yellow-700 mb-4">Földszint (110 nm, 2021-ben felújítva)</h3>
+            <p class="text-lg mb-4 italic">A nyitott étkező, a **beépített kandallós** nappali és a könyvtár/dolgozószoba gyönyörű kilátást nyújt a bejárat felől.</p>
             <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
-                <li class="p-2 border-b">2 tágas hálószoba (klíma, laminált parketta).</li>
+                <li class="p-2 border-b">2 tágas hálószoba (klíma, laminált padló).</li>
                 <li class="p-2 border-b">Konyha: Padlófűtés, új **MIELE** indukciós főzőlap, sütő, mosogatógép.</li>
-                <li class="p-2 border-b">Étkező: **6 méteres üvegfal** tolóajtóval, fedett teraszra / télikertre.</li>
-                <li class="p-2 border-b">Fürdőszoba: Padlófűtés, klíma, kád, zuhany, dupla mosdó.</li>
+                <li class="p-2 border-b">Étkező: **6 m-es üvegfal** tolóajtóval a fedett teraszra / télikertre.</li>
+                <li class="p-2 border-b">Fürdőszoba: Padlófűtés, klíma, kád, zuhanyzó, dupla mosdó.</li>
                 <li class="p-2 border-b">Nappali: Beépített kandalló, klíma.</li>
                 <li class="p-2 border-b">Kamra és külön WC.</li>
             </ul>
         </div>
         
-        <!-- Részletes leírás - Emelet -->
+        <!-- Részletes Leírás - Emelet -->
         <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-500 mt-8">
-            <h3 class="text-2xl font-bold text-indigo-700 mb-4">Emelet / Tetőtér (110 m²)</h3>
-            <p class="text-lg mb-4 italic">Közel **50 m² egybefüggő nappali** padlófűtéssel, klímával és kandallóval.</p>            
+            <h3 class="text-3xl font-bold text-indigo-700 mb-4">Emelet / Tetőtér (110 nm)</h3>
+            <p class="text-lg mb-4 italic">Majdnem **50 nm-es egybefüggő nappali** padlófűtéssel, klímával és kandallóval.</p>
             <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
-                <li class="p-2 border-b">Nappali: kb. 50 m², klíma, kandalló, padlófűtés.</li>
-                <li class="p-2 border-b">**Mini télikert erkély** fantasztikus kilátással a Budai hegyekre és a Szabadság szoborra.</li>
-                <li class="p-2 border-b">Hálószoba és külön beépített szekrényes szoba (klíma, padlófűtés).</li>
-                <li class="p-2 border-b">Konyha: Teljesen felszerelt (kerámia főzőlap, mosogatógép, mosógép) étkezősarokkal.</li>
-                <li class="p-2 border-b">Fürdőszoba: Padlófűtés, kád, zuhany, WC.</li>
+                <li class="p-2 border-b">Nappali: Kb. 50 nm, klíma, kandalló, padlófűtés.</li>
+                <li class="p-2 border-b">**Mini télikert erkély** fantasztikus kilátással a Budai-hegyekre és a Szabadság-szoborra.</li>
+                <li class="p-2 border-b">Hálószoba és külön gardrób (klíma, padlófűtés).</li>
+                <li class="p-2 border-b">Konyha: Teljesen felszerelt (kerámia főzőlap, mosogatógép, mosógép) sarok étkezővel.</li>
+                <li class="p-2 border-b">Fürdőszoba: Padlófűtés, kád, zuhanyzó, WC.</li>
             </ul>
         </div>
     </section>
 
-    <!-- Műszaki és Infrastruktúra -->
+    <!-- Technikai és Infrastruktúra -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-blue-50">
-        <h2 class="text-3xl font-bold mb-10 text-center">Fűtés, Rezsi és Elhelyezkedés</h2>
+        <h2 class="text-4xl font-bold mb-10 text-center">Fűtés, Rezsi és Elhelyezkedés</h2>
 
         <div class="grid md:grid-cols-2 gap-12">
             <!-- Fűtés és Rezsi -->
             <div>
-                <h3 class="text-2xl font-semibold mb-4 text-blue-700">Zöld fűtési megoldások</h3>
+                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Zöld Fűtési Megoldások</h3>
                 <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh-s napelem:** Biztosítja a teljes áramellátást (hűtés, fűtés).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **7 év szaldó elszámolási** jogosultság van még hátra (extrém alacsony rezsi!).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Padlófűtés, radiátorok, Vaillant központi fűtés (2021).</li>
+                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh-s Napelem Rendszer:** Teljesen biztosítja az áramellátást (hűtés, fűtés).</li>
+                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **7 év szaldós elszámolás** még hátra van (extra alacsony rezsi!).</li>
+                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Padlófűtés, radiátorok, Vailant központi fűtés (2021).</li>
                     <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **6 klímaberendezés** és 2 kandalló.</li>
                     <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Éves termelés (2023): **1.38 MWh**.</li>
                 </ul>
@@ -254,16 +271,16 @@
 
             <!-- Infrastruktúra -->
             <div>
-                <h3 class="text-2xl font-semibold mb-4 text-blue-700">Prémium elhelyezkedés (Ganzkertváros)</h3>
+                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Prémium Elhelyezkedés (Ganzkertváros)</h3>
                 <ul class="list-none space-y-3 text-gray-700">
                     <li class="flex items-center">
                         <span class="text-xl font-bold mr-2 text-red-500">&#9992;</span> **Liszt Ferenc Repülőtér: kb. 6 perc**
                     </li>
                     <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#10148;</span> **Belváros: kb. 30 perc** (3 útvonalon)
+                        <span class="text-xl font-bold mr-2 text-red-500">&#10148;</span> **Városközpont: kb. 30 perc** (3 útvonalon keresztül)
                     </li>
                     <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128663;</span> **Autópályák (M0, M4, M5):** 4-8 km távolságon belül elérhetők.
+                        <span class="text-xl font-bold mr-2 text-red-500">&#128663;</span> **Autópályák (M0, M4, M5):** 4-8 km távolságon belül elérhetőek.
                     </li>
                     <li class="flex items-center">
                         <span class="text-xl font-bold mr-2 text-red-500">&#127976;</span> **Oktatás:** Iskola, állami/magán óvoda, bölcsőde **300m-en belül**!
@@ -279,14 +296,14 @@
     <!-- CTA / Lábléc -->
     <footer class="hero-bg text-white py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-2xl sm:text-3xl font-bold mb-4">Ne hagyja ki ezt az egyedülálló lehetőséget!</p>
-            <p class="text-xl mb-6">Vegye fel velünk a kapcsolatot még ma a részletekért és a megtekintés időpontjának egyeztetéséhez.</p>
+            <p class="text-3xl sm:text-4xl font-bold mb-4">Ne hagyja ki ezt az egyedülálló lehetőséget!</p>
+            <p class="text-xl mb-6">Vegye fel velünk a kapcsolatot még ma a részletekért és a megtekintés egyeztetéséért.</p>
             
-            <!-- CTA gombok konténer (Telefon és Facebook) -->
+            <!-- CTA konténer a két gombhoz (Telefon és Facebook) -->
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <!-- Telefon CTA -->
                 <a href="tel:+36204668282" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-black text-xl sm:text-2xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105">
-                    Hívás most: +36 20 466 8282
+                    Hívjon Most: +36 20 466 8282
                 </a>
                 
                 <!-- Facebook CTA -->
@@ -306,159 +323,22 @@
     </footer>
 
     <script>
-        // --- Nyelvválasztó logika ---
+        // JavaScript a nyelvválasztó megjelenítéséhez/elrejtéséhez
         const toggleButton = document.getElementById('lang-toggle-btn');
         const flagsContainer = document.getElementById('lang-flags');
 
+        // Fő funkció: a nyelvek láthatóságának váltása
         toggleButton.addEventListener('click', () => {
             flagsContainer.classList.toggle('hidden');
         });
 
+        // Opcionális: elrejti a nyelveket, ha a felhasználó máshova kattint
         document.addEventListener('click', (event) => {
             const isClickInside = document.getElementById('language-switcher').contains(event.target);
             
             if (!isClickInside && !flagsContainer.classList.contains('hidden')) {
                 flagsContainer.classList.add('hidden');
             }
-        });
-
-
-        // --- Karusszel logika (Áttűnés és Parallax) ---
-        // A képek listája a GitHub-ról
-        const images = [
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/3.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/4.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/5.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/7.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/8.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/9.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/11.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/13.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/15.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/16.jpg',
-            // 17.jpg kihagyva
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/18.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/20.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/21.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/22.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/23.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/24.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/25.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/26.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/27.jpg',
-            // 28.jpg kihagyva
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg',
-            'https://raw.githubusercontent.com/Mage1982/Oti/main/30.jpg'
-        ];
-        
-        let currentSlide = 0;
-        const sliderContainer = document.getElementById('slider-container');
-        const dotsContainer = document.getElementById('slider-dots');
-
-        function initCarousel() {
-            // 1. Diák és pöttyök létrehozása
-            images.forEach((src, index) => {
-                const slide = document.createElement('div');
-                slide.className = 'slide w-full h-full'; 
-                slide.setAttribute('data-index', index);
-                
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = `Ingatlan kép ${index + 1}`;
-                img.className = 'slide-image';
-                img.onerror = function() {
-                    // Hiba esetén helyettesítő képet mutat
-                    this.onerror = null;
-                    this.src = 'https://placehold.co/1200x675/888888/FFFFFF?text=HIBA+A+K%C3%89P+BET%C3%96LT%C3%89SEKOR';
-                };
-                slide.appendChild(img);
-                sliderContainer.appendChild(slide);
-
-                // Pötty létrehozása
-                const dot = document.createElement('button');
-                dot.className = 'w-3 h-3 rounded-full bg-white transition duration-300 opacity-50 hover:opacity-100';
-                dot.setAttribute('data-index', index);
-                dot.onclick = () => showSlide(index);
-                dotsContainer.appendChild(dot);
-            });
-
-            showSlide(currentSlide);
-            
-            // Automatikus váltás (8 másodpercenként)
-            setInterval(() => {
-                changeSlide(1);
-            }, 8000); 
-
-            // Parallax görgetéskezelő hozzáadása
-            window.addEventListener('scroll', handleParallax);
-        }
-
-        /**
-         * Parallax hatás: a görgetés során lassabban mozgó aktív kép.
-         */
-        function handleParallax() {
-            const activeSlideImg = document.querySelector('.slide.active .slide-image');
-            if (!activeSlideImg) return;
-
-            // Parallax sebesség (pl. 30%)
-            const speed = 0.3; 
-            
-            // Függőleges eltolás kiszámítása a görgetési pozíció alapján
-            const yOffset = window.scrollY * speed;
-
-            activeSlideImg.style.transform = `translateY(${yOffset}px)`;
-        }
-
-
-        function showSlide(index) {
-            // Index kiszámítása (körforgás biztosítása)
-            currentSlide = (index + images.length) % images.length;
-            
-            const slides = Array.from(sliderContainer.children);
-
-            // Diák láthatóságának frissítése (Fade hatás)
-            slides.forEach((slide, idx) => {
-                const img = slide.querySelector('.slide-image');
-                
-                if (idx === currentSlide) {
-                    slide.classList.add('active'); // átlátszatlanság 1
-                    handleParallax(); // Parallax alkalmazása az aktiváláskor
-                } else {
-                    slide.classList.remove('active'); // átlátszatlanság 0
-                    // Visszaállítás a nem látható diákon
-                    img.style.transform = 'translateY(0px)';
-                }
-            });
-            
-            // Pöttyök frissítése
-            Array.from(dotsContainer.children).forEach((dot, idx) => {
-                if (idx === currentSlide) {
-                    dot.classList.remove('opacity-50');
-                    dot.classList.add('opacity-100', 'ring-2', 'ring-red-600');
-                } else {
-                    dot.classList.add('opacity-50');
-                    dot.classList.remove('opacity-100', 'ring-2', 'ring-red-600');
-                }
-            });
-        }
-
-        // Globális funkció a gombokhoz
-        window.changeSlide = function(n) {
-            showSlide(currentSlide + n);
-        }
-
-        // Karusszel inicializálása
-        window.addEventListener('load', () => {
-            initCarousel();
-            // Kezdeti parallax eltolás beállítása
-            handleParallax();
         });
     </script>
 </body>
