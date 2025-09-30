@@ -23,14 +23,22 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Language Selector Flags -->
-    <div class="fixed top-4 right-4 z-50 flex space-x-3 bg-white p-2 rounded-lg shadow-xl border border-gray-100">
-        <!-- Hungarian (Aktív nyelv, kiemelve) -->
-        <a href="index.html" title="Magyar" class="text-2xl opacity-100 transform scale-110">🇭🇺</a>
-        <!-- English (Link a gb.html-re) -->
-        <a href="GB.html" title="English" class="text-2xl opacity-60 hover:opacity-100 transition duration-150">🇬🇧</a>
-        <!-- German (Link a de.html-re) -->
-        <a href="de.html" title="Deutsch" class="text-2xl opacity-60 hover:opacity-100 transition duration-150">🇩🇪</a>
+    <!-- Language Selector - Földgömb ikon mögé rejtve, kattintásra megjelenik -->
+    <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
+        <!-- Globe Icon (Toggle Button) -->
+        <button id="lang-toggle-btn" title="Nyelvválasztás" class="text-3xl p-2 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+            🌍
+        </button>
+        
+        <!-- Flags Container (Initially hidden) -->
+        <div id="lang-flags" class="hidden flex space-x-3 bg-white p-2 rounded-xl shadow-2xl border border-gray-100">
+            <!-- Hungarian (Aktív nyelv, kiemelve) -->
+            <a href="index.html" title="Magyar" class="text-3xl transition duration-300 transform scale-125 opacity-100">🇭🇺</a>
+            <!-- English (Link a gb.html-re) -->
+            <a href="GB.html" title="English" class="text-2xl opacity-75 hover:opacity-100 transition duration-300 transform hover:scale-110">🇬🇧</a>
+            <!-- German (Link a de.html-re) -->
+            <a href="de.html" title="Deutsch" class="text-2xl opacity-75 hover:opacity-100 transition duration-300 transform hover:scale-110">🇩🇪</a>
+        </div>
     </div>
 
     <!-- Main Section / Hero -->
@@ -215,8 +223,8 @@
                 
                 <!-- Facebook CTA -->
                 <a href="https://www.facebook.com/lelovics.otto/posts/pfbid0jS9LofyvY1sQd6wUimq4ZwveYckKKDAo8FxtXz6HnhPnros6cPt7qXH7hjFurhoXl" 
-                   target="_blank" 
-                   class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
+                    target="_blank" 
+                    class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
                     <!-- Simple Facebook icon with SVG -->
                     <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M14 10H12V12H14V10ZM21.5 12C21.5 6.75 17.25 2.5 12 2.5C6.75 2.5 2.5 6.75 2.5 12C2.5 16.63 5.86 20.44 10.38 21.36V14.1H7.83V11.23H10.38V8.92C10.38 6.37 11.95 5.04 14.28 5.04C15.35 5.04 16.47 5.23 16.47 5.23V7.63H15.2C13.92 7.63 13.52 8.41 13.52 9.17V11.23H16.37L15.93 14.1H13.52V21.36C17.95 20.44 21.5 16.63 21.5 12Z" />
@@ -229,5 +237,24 @@
         </div>
     </footer>
 
+    <script>
+        // JavaScript a nyelvválasztó megjelenítéséhez/elrejtéséhez
+        const toggleButton = document.getElementById('lang-toggle-btn');
+        const flagsContainer = document.getElementById('lang-flags');
+
+        // Fő funkció: megjeleníti vagy elrejti a zászlókat
+        toggleButton.addEventListener('click', () => {
+            flagsContainer.classList.toggle('hidden');
+        });
+
+        // Opcionális: Elrejti a zászlókat, ha a felhasználó máshova kattint (UX javítása)
+        document.addEventListener('click', (event) => {
+            const isClickInside = document.getElementById('language-switcher').contains(event.target);
+            
+            if (!isClickInside && !flagsContainer.classList.contains('hidden')) {
+                flagsContainer.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
