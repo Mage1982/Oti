@@ -195,9 +195,26 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-2xl sm:text-3xl font-bold mb-4">Ne hagyja ki ezt a páratlan lehetőséget!</p>
             <p class="text-xl mb-6">Vegye fel velünk a kapcsolatot még ma a részletekért és a megtekintés egyeztetéséhez.</p>
-            <a href="tel:+36204668282" class="mt-4 inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-black text-2xl py-3 px-10 rounded-full shadow-2xl transition duration-300 transform hover:scale-110">
-                Hívjon most: +36 20 466 8282
-            </a>
+            
+            <!-- ÚJ CTA konténer a két gombnak (Telefonszám és Facebook) -->
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <!-- Telefonszám CTA -->
+                <a href="tel:+36204668282" class="inline-flex items-center justify-center bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-black text-xl sm:text-2xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105">
+                    Hívjon most: +36 20 466 8282
+                </a>
+                
+                <!-- Facebook CTA -->
+                <a href="https://www.facebook.com/lelovics.otto/posts/pfbid0jS9LofyvY1sQd6wUimq4ZwveYckKKDAo8FxtXz6HnhPnros6cPt7qXH7hjFurhoXl" 
+                   target="_blank" 
+                   class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
+                    <!-- Egyszerű Facebook ikon SVG-vel -->
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 10H12V12H14V10ZM21.5 12C21.5 6.75 17.25 2.5 12 2.5C6.75 2.5 2.5 6.75 2.5 12C2.5 16.63 5.86 20.44 10.38 21.36V14.1H7.83V11.23H10.38V8.92C10.38 6.37 11.95 5.04 14.28 5.04C15.35 5.04 16.47 5.23 16.47 5.23V7.63H15.2C13.92 7.63 13.52 8.41 13.52 9.17V11.23H16.37L15.93 14.1H13.52V21.36C17.95 20.44 21.5 16.63 21.5 12Z" />
+                    </svg>
+                    Megtekintés Facebookon
+                </a>
+            </div>
+            
             <p class="mt-8 text-sm text-gray-400">&copy; 2025 Ingatlan Hirdetés. Minden jog fenntartva.</p>
         </div>
     </footer>
