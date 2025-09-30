@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képkaruszel Galéria</title>
+    <style>
+        /* CSS a karuszel stílusához */
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .karuszel-kontener {
+            max-width: 700px; /* Karuszel maximális szélessége */
+            position: relative;
+            margin: 20px;
+            overflow: hidden; /* Elrejti a nem látható képeket */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .karuszel-kepek {
+            display: flex; /* Képek sorban, egymás mellett */
+            transition: transform 0.5s ease-in-out; /* Animáció a képek váltásakor */
+        }
+
+        .karuszel-kepek img {
+            width: 100%; /* Minden kép kitölti a konténert */
+            height: auto;
+            flex-shrink: 0; /* Ne zsugorodjon */
+            display: block;
+            object-fit: cover; /* Képarány megtartása */
+        }
+
+        .nav-gomb {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .nav-gomb:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+
+<div class="karuszel-kontener">
+    <div class="karuszel-kepek" id="karuszel-kepek">
+        <img src="kep1.jpg" alt="Első kép">
+        <img src="kep2.jpg" alt="Második kép">
+        <img src="kep3.jpg" alt="Harmadik kép">
+        </div>
+
+    <button class="nav-gomb prev" onclick="leptet(-1)">&#10094;</button>
+    <button class="nav-gomb next" onclick="leptet(1)">&#10095;</button>
+</div>
+
+<script>
+    // JavaScript a képek léptetéséhez
+    const karuszelKontener = document.getElementById('karuszel-kepek');
+    const kepek = karuszelKontener.querySelectorAll('img');
+    let aktualisKepIndex = 0;
+    const osszesKep = kepek.length;
+
+    // Beállítja a képek pozícióját a "csúszka" effektushoz
+    function frissitKaruszel() {
+        const elmozdulas = -aktualisKepIndex * 100; /* Százalékos elmozdulás (100% minden kép) */
+        karuszelKontener.style.transform = `translateX(${elmozdulas}%)`;
+    }
+
+    // Lépteti az aktuális kép indexét, gondoskodik a ciklikusságról
+    function leptet(irany) {
+        aktualisKepIndex += irany;
+
+        /* Végtelen ciklus: ha elértük a végét, ugorjunk az elejére, és fordítva */
+        if (aktualisKepIndex < 0) {
+            aktualisKepIndex = osszesKep - 1;
+        } else if (aktualisKepIndex >= osszesKep) {
+            aktualisKepIndex = 0;
+        }
+
+        frissitKaruszel();
+    }
+
+    // A karuszel indítása a 0. képpel
+    frissitKaruszel();
+</script>
+
+</body>
+</html>
