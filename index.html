@@ -25,19 +25,24 @@
 
     <!-- Language Selector - Földgömb ikon mögé rejtve, kattintásra megjelenik -->
     <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
-        <!-- Globe Icon (Toggle Button) -->
-        <button id="lang-toggle-btn" title="Nyelvválasztás" class="text-3xl p-2 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
-            🌍
+        <!-- Globe Icon (Toggle Button) - SVG ICON -->
+        <button id="lang-toggle-btn" title="Nyelvválasztás" class="p-3 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+            <!-- Globe SVG Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-600">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20"></path>
+                <path d="M2 12h20"></path>
+            </svg>
         </button>
         
-        <!-- Flags Container (Initially hidden) -->
-        <div id="lang-flags" class="hidden flex space-x-3 bg-white p-2 rounded-xl shadow-2xl border border-gray-100">
+        <!-- Flags Container (Initially hidden) - Zászlók helyett rövidítések, stílushoz igazítva -->
+        <div id="lang-flags" class="hidden flex space-x-1 p-2 bg-white rounded-xl shadow-2xl border border-gray-100">
             <!-- Hungarian (Aktív nyelv, kiemelve) -->
-            <a href="index.html" title="Magyar" class="text-3xl transition duration-300 transform scale-125 opacity-100">🇭🇺</a>
+            <a href="index.html" title="Magyar" class="font-bold text-sm px-3 py-1 rounded-lg bg-indigo-600 text-white transition duration-200 hover:bg-indigo-700">HU</a>
             <!-- English (Link a gb.html-re) -->
-            <a href="GB.html" title="English" class="text-2xl opacity-75 hover:opacity-100 transition duration-300 transform hover:scale-110">🇬🇧</a>
+            <a href="GB.html" title="English" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
             <!-- German (Link a de.html-re) -->
-            <a href="de.html" title="Deutsch" class="text-2xl opacity-75 hover:opacity-100 transition duration-300 transform hover:scale-110">🇩🇪</a>
+            <a href="de.html" title="Deutsch" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
         </div>
     </div>
 
