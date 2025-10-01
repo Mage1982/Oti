@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFFORDABLE LUXURY WITH ZERO OVERHEAD - Budapest 18th District</title>
-    <!-- Load Tailwind CSS for quick, responsive styling -->
+    <title>AFFORDABLE LUXURY Property Listing - Budapest 18th District</title>
+    <!-- Load Tailwind CSS for fast, responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for font and background */
@@ -19,20 +19,29 @@
         .highlight-text {
             color: #ffcc00; /* Gold/Yellow highlight */
         }
-        /* Style for gallery items */
+        /* Gallery item styles */
         .gallery-item {
-            aspect-ratio: 4/3; /* 4:3 ratio for consistent look */
+            aspect-ratio: 4/3; /* 4:3 aspect ratio for consistent look */
             object-fit: cover;
             width: 100%;
             height: auto;
+        }
+        /* Featured card effect for a professional look */
+        .feature-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(13, 50, 77, 0.15);
         }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Language Selector - Hidden behind the globe icon, appears on click -->
+    <!-- Language Switcher -->
     <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
-        <!-- Globe Icon (Toggle Button) - SVG ICON -->
+        <!-- Globe Icon (Toggle Button) -->
         <button id="lang-toggle-btn" title="Select Language" class="p-3 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
             <!-- Globe SVG Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-600">
@@ -42,12 +51,12 @@
             </svg>
         </button>
         
-        <!-- Language Selectors (Initially hidden) - Text abbreviations used instead of flags -->
+        <!-- Language Selectors (Initially hidden) -->
         <div id="lang-flags" class="hidden flex space-x-1 p-2 bg-white rounded-xl shadow-2xl border border-gray-100">
             <!-- Hungarian -->
             <a href="index.html" title="Magyar" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">HU</a>
             <!-- English (Active language, highlighted) -->
-            <a href="GB.html" title="English" class="font-bold text-sm px-3 py-1 rounded-lg bg-indigo-600 text-white transition duration-200 hover:bg-indigo-700">EN</a>
+            <a href="en.html" title="English" class="font-bold text-sm px-3 py-1 rounded-lg bg-indigo-600 text-white transition duration-200 hover:bg-indigo-700">EN</a>
             <!-- German -->
             <a href="de.html" title="Deutsch" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
         </div>
@@ -57,10 +66,10 @@
     <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-5xl sm:text-7xl font-black mb-4">
-                <span class="highlight-text">AFFORDABLE LUXURY</span> WITH ZERO OVERHEAD
+                <span class="highlight-text">AFFORDABLE LUXURY</span> WITH ZERO UTILITY COSTS
             </h1>
             <p class="text-2xl sm:text-3xl font-light mb-8 max-w-4xl mx-auto">
-                FOR SALE: High-quality, multi-generational family house in a unique location, featuring an outbuilding, large garden, and a **solar system**.
+                FOR SALE: High-quality, multi-generational family house with a unique location, outbuilding, large garden, and a **solar panel system**.
             </p>
             <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg">
                 <p class="text-3xl sm:text-5xl font-black text-gray-900">
@@ -77,7 +86,7 @@
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-12">
         <img 
             src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" 
-            alt="Preview of the main house with the garden"
+            alt="View of the main building with the garden"
             class="w-full rounded-2xl shadow-2xl border-4 border-white object-cover"
         />
     </section>
@@ -86,7 +95,7 @@
     <section class="py-12 bg-white border-t border-b border-gray-200">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl sm:text-6xl font-extrabold text-red-600 mb-6">
-                YOUR NEW HOME: NOW ONLY
+                YOUR NEW HOME: ONLY
             </h2>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
                 <div class="p-4 sm:p-6 bg-red-100 rounded-xl shadow-lg">
@@ -98,22 +107,22 @@
                     <p class="text-5xl sm:text-7xl font-black text-red-600">312.000.000,-</p>
                 </div>
             </div>
-            <!-- Changed background color from Indigo to Red -->
+            <!-- Button to the specified phone number -->
             <a href="tel:+36204668282" class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                 INQUIRE NOW: +36 20 466 8282
             </a>
         </div>
     </section>
 
-    <!-- Image Gallery Section (Images inserted) -->
+    <!-- Image Gallery Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
         <h2 class="text-5xl font-extrabold text-center text-indigo-700 mb-10">
-            Image Gallery: A Look Inside Your New Home
+            Gallery: A Glimpse into Your New Home
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             
             <!-- Image 1: Main building exterior -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" 
                     alt="Exterior view of the house" 
@@ -122,16 +131,16 @@
             </div>
             
             <!-- Image 2: Living room with fireplace -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" 
-                    alt="Ground floor living room with fireplace" 
+                    alt="Ground floor living room with built-in fireplace" 
                     class="gallery-item"
                 />
             </div>
 
-            <!-- Image 3: Modern Kitchen -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 3: Modern kitchen -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" 
                     alt="Modern Miele kitchen with floor heating" 
@@ -140,7 +149,7 @@
             </div>
 
             <!-- Image 4: Outbuilding and garage -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" 
                     alt="The 100 sqm outbuilding with double garage" 
@@ -149,7 +158,7 @@
             </div>
 
             <!-- Image 5: Garden and pavilion -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" 
                     alt="Lush garden with pavilion" 
@@ -157,8 +166,8 @@
                 />
             </div>
 
-            <!-- Image 6: Solar Panel System -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 6: Solar panel system -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg" 
                     alt="The 12 kWh solar panel system on the roof" 
@@ -168,135 +177,166 @@
         </div>
     </section>
 
-    <!-- Key Features Overview -->
+    <!-- Key Features Overview (Dynamic Cards) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-4xl font-bold text-center mb-12">Key Features & Amenities</h2>
+        <h2 class="text-4xl font-bold text-center mb-12">Key Features and Comfort Extras</h2>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <!-- Card 1: Multi-Generational -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-indigo-600">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-indigo-600 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Multi-Generational Living</h3>
-                <p class="text-gray-600">Usable as two separate residential units, totaling **220 sqm** living space, located on the quietest street in the 18th district.</p>
+                <p class="text-gray-600">Usable as two separate residential units, a total of **220 sqm** of living space, on the quietest street in the 18th district.</p>
             </div>
-            <!-- Card 2: Low Overhead -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
-                <h3 class="text-xl font-semibold mb-2">Zero Utility Costs</h3>
-                <p class="text-gray-600">Heating and cooling provided by a **12 kWh solar park**. **7 years of net metering remaining**!</p>
+            <!-- Card 2: Low Utilities -->
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500 feature-card">
+                <h3 class="text-xl font-semibold mb-2">Zero Utilities</h3>
+                <p class="text-gray-600">Heating and cooling are provided by the **12 kWh solar park**. **7 years of net metering** remaining!</p>
             </div>
             <!-- Card 3: Plot and Outbuilding -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
-                <h3 class="text-xl font-semibold mb-2">Huge Plot & Garage</h3>
-                <p class="text-gray-600">Over **1300 sqm plot**. Special approx. **100 sqm outbuilding** with a double garage.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-green-500 feature-card">
+                <h3 class="text-xl font-semibold mb-2">Huge Plot and Garage</h3>
+                <p class="text-gray-600">More than **1300 sqm plot**. Special approx. **100 sqm outbuilding** with a double garage.</p>
             </div>
             <!-- Card 4: Insulation -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-blue-500 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Premium Insulation</h3>
-                <p class="text-gray-600">Full **15 cm thick insulation**, with double insulation in the attic/roof.</p>
+                <p class="text-gray-600">Full **15 cm thick insulation**, with double insulation in the attic.</p>
             </div>
         </div>
     </section>
 
     <!-- Outbuilding and Garden -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-lg shadow-inner mt-12">
-        <h2 class="text-4xl font-bold mb-6 text-indigo-700">Outbuilding and Garden Paradise</h2>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-2xl shadow-inner mt-12">
+        <h2 class="text-4xl font-bold mb-6 text-indigo-700 text-center">Outbuilding and Garden Paradise</h2>
         
+        <!-- Image: Outbuilding and garage -->
+        <div class="mb-10">
+            <img 
+                src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" 
+                alt="The 100 sqm outbuilding that can be converted into an office or apartment" 
+                class="w-full rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.01]"
+            />
+            <p class="text-center text-sm italic mt-2 text-gray-600">The 100 sqm outbuilding with double garage is ideal for a business or guest house.</p>
+        </div>
+
         <div class="md:grid md:grid-cols-2 md:gap-12">
             <div>
-                <h3 class="text-3xl font-bold mb-3">The Outbuilding – Ideal for Business</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>**100 sqm floor area**, double garage with electric door, double eaves overhang.</li>
-                    <li>2 hobby rooms, restroom, shower, storage room, and a **workshop with high-voltage electricity**.</li>
-                    <li>**Outdoor bar** with chimney connection.</li>
-                    <li>The **100 sqm attic** can be converted into an apartment or office.</li>
+                <h3 class="text-3xl font-bold mb-3 text-indigo-900">The Outbuilding – Ideal for Business</h3>
+                <ul class="list-none space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> **100 sqm floor area**, double garage with electric door.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> 2 hobby rooms, shower, storage room, and **workshop with industrial power**.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> **Garden bar** with chimney connection.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> The **100 sqm attic** can be converted into an apartment or office.</li>
                 </ul>
             </div>
             <div class="mt-8 md:mt-0">
-                <h3 class="text-3xl font-bold mb-3">Garden and Environment</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>**Dug well** with excellent irrigation water quality.</li>
-                    <li>**16 sqm covered pavilion** and fire pit/grill area.</li>
-                    <li>**2000 liter rainwater collector**.</li>
-                    <li>The garden is 90% surrounded by a concrete fence, ensuring privacy.</li>
+                <h3 class="text-3xl font-bold mb-3 text-indigo-900">Garden and Environment</h3>
+                <ul class="list-none space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **Drilled well** with excellent irrigation water quality.</li>
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **16 sqm covered pavilion** and fireplace/grill area.</li>
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **2000 liter rainwater collector**.</li>
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> The garden is 90% surrounded by concrete fence, ensuring privacy.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Description - Ground Floor -->
+    <!-- Detailed Description - Ground Floor and Upper Floor (Dynamic Card Layout) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-4xl font-bold mb-6 text-center">Detailed Layout of the House</h2>
-        <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-yellow-500">
-            <h3 class="text-3xl font-bold text-yellow-700 mb-4">Ground Floor (110 sqm, renovated in 2021)</h3>
-            <p class="text-lg mb-4 italic">The open dining room, the living room with an **built-in fireplace**, and the library/study offer a stunning view from the entrance.</p>
-            <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
-                <li class="p-2 border-b">2 spacious bedrooms (A/C, laminate flooring).</li>
-                <li class="p-2 border-b">Kitchen: Floor heating, new **MIELE** induction hob, oven, dishwasher.</li>
-                <li class="p-2 border-b">Dining Room: **6m glass wall** with sliding door to the covered terrace / winter garden.</li>
-                <li class="p-2 border-b">Bathroom: Floor heating, A/C, bathtub, shower, double sink.</li>
-                <li class="p-2 border-b">Living Room: Built-in fireplace, A/C.</li>
-                <li class="p-2 border-b">Pantry and separate WC.</li>
-            </ul>
-        </div>
-        
-        <!-- Detailed Description - Upper Floor -->
-        <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-500 mt-8">
-            <h3 class="text-3xl font-bold text-indigo-700 mb-4">Upper Floor / Attic (110 sqm)</h3>
-            <p class="text-lg mb-4 italic">Almost **50 sqm continuous living room** with floor heating, A/C, and fireplace.</p>
-            <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
-                <li class="p-2 border-b">Living Room: Approx. 50 sqm, A/C, fireplace, floor heating.</li>
-                <li class="p-2 border-b">**Mini winter garden balcony** with a fantastic view of the Buda Hills and the Statue of Liberty.</li>
-                <li class="p-2 border-b">Bedroom and separate walk-in closet (A/C, floor heating).</li>
-                <li class="p-2 border-b">Kitchen: Fully equipped (ceramic hob, dishwasher, washing machine) with corner dining area.</li>
-                <li class="p-2 border-b">Bathroom: Floor heating, bathtub, shower, WC.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Technical and Infrastructure -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-blue-50">
-        <h2 class="text-4xl font-bold mb-10 text-center">Heating, Utility Costs, and Location</h2>
-
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Heating and Overhead -->
-            <div>
-                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Green Heating Solutions</h3>
-                <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh Solar System:** Ensures complete electricity supply (cooling, heating).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **7 years of net metering remaining** (extra low overhead!).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Floor heating, radiators, Vailant central heating (2021).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **6 air conditioners** and 2 fireplaces.</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Annual Production (2023): **1.38 MWh**.</li>
+        <h2 class="text-4xl font-bold mb-10 text-center text-gray-800">Detailed Layout of the House</h2>
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Ground Floor (Left Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-yellow-500 feature-card">
+                <h3 class="text-3xl font-black text-yellow-700 mb-4 flex items-center">
+                    <!-- Icon for unified design -->
+                    <svg class="w-8 h-8 mr-3 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                    Ground Floor (110 sqm)
+                </h3>
+                <p class="text-lg mb-6 italic text-gray-600">Fully renovated (2021). Living room with fireplace, modern MIELE kitchen, floor heating.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Bedrooms:** 2 spacious rooms (AC, laminate flooring).</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Kitchen:** Floor heating, new MIELE appliances.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Dining/Terrace:** 6m glass wall with sliding door to the covered winter garden.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Living Room:** Built-in fireplace, AC.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Bathroom:** Floor heating, tub, shower, double sink.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> Pantry and separate toilet.</li>
                 </ul>
             </div>
-
-            <!-- Infrastructure -->
-            <div>
-                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Premium Location (Ganzkertváros)</h3>
-                <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#9992;</span> **Liszt Ferenc Airport: approx. 6 minutes**
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#10148;</span> **City Center: approx. 30 minutes** (via 3 routes)
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128663;</span> **Motorways (M0, M4, M5):** Accessible within 4-8 km.
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#127976;</span> **Education:** School, state/private kindergarten, nursery **within 300m**!
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128717;</span> **Transport/Shopping:** Bus (300m), Tram (500m), Shopping Mall (1 km).
-                    </li>
+            
+            <!-- Upper Floor (Right Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-indigo-600 feature-card">
+                <h3 class="text-3xl font-black text-indigo-700 mb-4 flex items-center">
+                    <!-- Icon for unified design -->
+                    <svg class="w-8 h-8 mr-3 text-indigo-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                    Upper Floor / Attic (110 sqm)
+                </h3>
+                <p class="text-lg mb-6 italic text-gray-600">Nearly 50 sqm continuous living room, mini winter garden balcony, panorama overlooking the Buda Hills.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Living Room:** Approx. 50 sqm, AC, fireplace, floor heating.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Bedroom:** With separate walk-in closet (AC, floor heating).</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Balcony:** Mini winter garden, fantastic view.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Kitchen:** Fully equipped, with corner dining area.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Bathroom:** Floor heating, tub, shower, toilet.</li>
                 </ul>
             </div>
         </div>
     </section>
+
+    <!-- REDESIGNED: Technical and Infrastructure Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-5xl font-extrabold mb-12 text-center text-indigo-700">
+            Financial Savvy: Zero Utilities & Excellent Location
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- 1. Card: Energy Efficiency and Heating (Image on the left) -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-8 border-green-600 feature-card flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-2/5">
+                    <img
+                        src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg"
+                        alt="The 12 kWh solar panel system installed on the roof"
+                        class="w-full h-auto rounded-lg shadow-lg object-cover"
+                    />
+                </div>
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-3xl font-black mb-3 text-green-700">Energy Independence</h3>
+                    <p class="mb-4 text-gray-600 font-medium">Forget utility bills! The modern, oversized green energy system guarantees sustainable and cost-free living.</p>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh Solar Park:** Provides full electricity supply.</li>
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **Net Metering:** Guaranteed zero utilities for another **7 years**.</li>
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Heating: Vailant boiler (2021), floor heating, radiator, **6 AC units**, 2 fireplaces.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Card: Location and Infrastructure (Image on the right) -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-8 border-blue-600 feature-card flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-2/5 order-last md:order-first">
+                    <h3 class="text-3xl font-black mb-3 text-blue-700">Strategic Location</h3>
+                    <p class="mb-4 text-gray-600 font-medium">Ganzkertváros' quiet, safe street, at an ideal distance from everything a family needs.</p>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Airport:** Reachable in 6 minutes.</li>
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Education:** School, kindergarten, nursery **within 300m**!</li>
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Motorways (M0, M4):** Accessible by a 5-minute drive.</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-3/5 order-first md:order-last">
+                    <!-- Image to highlight transportation aspect -->
+                    <img
+                        src="https://raw.githubusercontent.com/Mage1982/Oti/main/utcakep_terkep.jpg"
+                        alt="Nearby street view or map of the area"
+                        class="w-full h-auto rounded-lg shadow-lg object-cover"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- REDESIGNED SECTION END -->
 
     <!-- CTA / Footer -->
     <footer class="hero-bg text-white py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-3xl sm:text-4xl font-bold mb-4">Don't miss this unique opportunity!</p>
+            <p class="text-3xl sm:text-4xl font-bold mb-4">Don't miss out on this unique opportunity!</p>
             <p class="text-xl mb-6">Contact us today for details and to arrange a viewing.</p>
             
             <!-- CTA container for the two buttons (Phone and Facebook) -->
@@ -310,7 +350,7 @@
                 <a href="https://www.facebook.com/lelovics.otto/posts/pfbid0jS9LofyvY1sQd6wUimq4ZwveYckKKDAo8FxtXz6HnhPnros6cPt7qXH7hjFurhoXl" 
                     target="_blank" 
                     class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
-                    <!-- Simple Facebook icon with SVG -->
+                    <!-- Simple Facebook icon SVG -->
                     <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M14 10H12V12H14V10ZM21.5 12C21.5 6.75 17.25 2.5 12 2.5C6.75 2.5 2.5 6.75 2.5 12C2.5 16.63 5.86 20.44 10.38 21.36V14.1H7.83V11.23H10.38V8.92C10.38 6.37 11.95 5.04 14.28 5.04C15.35 5.04 16.47 5.23 16.47 5.23V7.63H15.2C13.92 7.63 13.52 8.41 13.52 9.17V11.23H16.37L15.93 14.1H13.52V21.36C17.95 20.44 21.5 16.63 21.5 12Z" />
                     </svg>
@@ -323,16 +363,16 @@
     </footer>
 
     <script>
-        // JavaScript to show/hide the language selector
+        // JavaScript to show/hide the language switcher
         const toggleButton = document.getElementById('lang-toggle-btn');
         const flagsContainer = document.getElementById('lang-flags');
 
-        // Main function: toggles flag visibility
+        // Main function: toggling the visibility of the languages
         toggleButton.addEventListener('click', () => {
             flagsContainer.classList.toggle('hidden');
         });
 
-        // Optional: Hides flags when the user clicks elsewhere
+        // Optional: hides the languages if the user clicks elsewhere
         document.addEventListener('click', (event) => {
             const isClickInside = document.getElementById('language-switcher').contains(event.target);
             
