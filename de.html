@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEZAHLBARER LUXUS MIT GERINGEN NEBENKOSTEN - Budapest XVIII. Bezirk</title>
-    <!-- Load Tailwind CSS for quick, responsive styling -->
+    <title>PREISWERTER LUXUS Immobilienangebot - Budapest 18. Bezirk</title>
+    <!-- Load Tailwind CSS for fast, responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for font and background */
@@ -19,20 +19,29 @@
         .highlight-text {
             color: #ffcc00; /* Gold/Yellow highlight */
         }
-        /* Stílus a képgaléria elemeihez */
+        /* Gallery item styles */
         .gallery-item {
-            aspect-ratio: 4/3; /* 4:3 arány a konzisztens megjelenésért */
+            aspect-ratio: 4/3; /* 4:3 aspect ratio for consistent look */
             object-fit: cover;
             width: 100%;
             height: auto;
+        }
+        /* Featured card effect for a professional look */
+        .feature-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(13, 50, 77, 0.15);
         }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Language Selector - Hidden behind the globe icon, appears on click -->
+    <!-- Language Switcher -->
     <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
-        <!-- Globe Icon (Toggle Button) - SVG ICON -->
+        <!-- Globe Icon (Toggle Button) -->
         <button id="lang-toggle-btn" title="Sprache auswählen" class="p-3 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
             <!-- Globe SVG Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-600">
@@ -42,12 +51,12 @@
             </svg>
         </button>
         
-        <!-- Language Selectors (Initially hidden) - Text abbreviations used instead of flags -->
+        <!-- Language Selectors (Initially hidden) -->
         <div id="lang-flags" class="hidden flex space-x-1 p-2 bg-white rounded-xl shadow-2xl border border-gray-100">
             <!-- Hungarian -->
             <a href="index.html" title="Magyar" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">HU</a>
             <!-- English -->
-            <a href="GB.html" title="English" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
+            <a href="en.html" title="English" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
             <!-- German (Active language, highlighted) -->
             <a href="de.html" title="Deutsch" class="font-bold text-sm px-3 py-1 rounded-lg bg-indigo-600 text-white transition duration-200 hover:bg-indigo-700">DE</a>
         </div>
@@ -57,14 +66,14 @@
     <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-5xl sm:text-7xl font-black mb-4">
-                <span class="highlight-text">BEZAHLBARER LUXUS</span> MIT NULL NEBENKOSTEN
+                <span class="highlight-text">PREISWERTER LUXUS</span> OHNE NEBENKOSTEN
             </h1>
             <p class="text-2xl sm:text-3xl font-light mb-8 max-w-4xl mx-auto">
-                ZU VERKAUFEN: Hochwertiges Mehrgenerationen-Einfamilienhaus in einzigartiger Lage, mit Nebengebäude, großem Garten und einer **Solaranlage**.
+                ZU VERKAUFEN: Hochwertiges Mehrgenerationen-Einfamilienhaus mit einzigartiger Lage, Nebengebäude, großem Garten und einer **Solaranlage**.
             </p>
             <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg">
                 <p class="text-3xl sm:text-5xl font-black text-gray-900">
-                    Budapest, XVIII. Bezirk, Ganzkertváros
+                    Budapest, 18. Bezirk, Ganzkertváros
                 </p>
                 <p class="text-xl sm:text-2xl font-medium text-gray-700 mt-1">
                     5 Minuten vom internationalen Flughafen Liszt Ferenc entfernt
@@ -73,11 +82,11 @@
         </div>
     </header>
     
-    <!-- Hero Image (Kiemelt kép a fő oldalon) -->
+    <!-- Hero Image (Featured image on the main page) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-12">
         <img 
             src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" 
-            alt="Vorschau des Haupthauses mit Garten"
+            alt="Blick auf das Hauptgebäude mit dem Garten"
             class="w-full rounded-2xl shadow-2xl border-4 border-white object-cover"
         />
     </section>
@@ -86,34 +95,34 @@
     <section class="py-12 bg-white border-t border-b border-gray-200">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl sm:text-6xl font-extrabold text-red-600 mb-6">
-                IHR NEUES ZUHAUSE: JETZT NUR
+                IHR NEUES ZUHAUSE: NUR
             </h2>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
                 <div class="p-4 sm:p-6 bg-red-100 rounded-xl shadow-lg">
-                    <p class="text-xl font-semibold text-red-700">EURO PREIS</p>
+                    <p class="text-xl font-semibold text-red-700">PREIS IN EURO</p>
                     <p class="text-5xl sm:text-7xl font-black text-red-600">780.000,-</p>
                 </div>
                 <div class="p-4 sm:p-6 bg-red-100 rounded-xl shadow-lg">
-                    <p class="text-xl font-semibold text-red-700">FORINT PREIS</p>
+                    <p class="text-xl font-semibold text-red-700">PREIS IN FORINT</p>
                     <p class="text-5xl sm:text-7xl font-black text-red-600">312.000.000,-</p>
                 </div>
             </div>
-            <!-- Hintergrundfarbe von Indigo auf Rot geändert -->
+            <!-- Button to the specified phone number -->
             <a href="tel:+36204668282" class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                 JETZT ANFRAGEN: +36 20 466 8282
             </a>
         </div>
     </section>
 
-    <!-- Bildergalerie / Image Gallery Section (Képek beillesztve) -->
+    <!-- Image Gallery Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
         <h2 class="text-5xl font-extrabold text-center text-indigo-700 mb-10">
-            Bildergalerie: Ein Blick in Ihr neues Zuhause
+            Galerie: Ein Einblick in Ihr neues Zuhause
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             
-            <!-- Bild 1: Außenansicht (Főépület Külső Képe) -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 1: Main building exterior -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" 
                     alt="Außenansicht des Hauses" 
@@ -121,17 +130,17 @@
                 />
             </div>
             
-            <!-- Bild 2: Wohnzimmer (Nappali Kandallóval) -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 2: Living room with fireplace -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" 
-                    alt="Erdgeschoss Wohnzimmer mit Kamin" 
+                    alt="Wohnzimmer im Erdgeschoss mit eingebautem Kamin" 
                     class="gallery-item"
                 />
             </div>
 
-            <!-- Bild 3: Küche (Modern Konyha Kép) -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 3: Modern kitchen -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" 
                     alt="Moderne Miele-Küche mit Fußbodenheizung" 
@@ -139,17 +148,17 @@
                 />
             </div>
 
-            <!-- Bild 4: Nebengebäude / Garage (Melléképület és Garázs) -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 4: Outbuilding and garage -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" 
-                    alt="Das 100 qm Nebengebäude mit Doppelgarage" 
+                    alt="Das 100 qm große Nebengebäude mit Doppelgarage" 
                     class="gallery-item"
                 />
             </div>
 
-            <!-- Bild 5: Garten / Pavillon (Kert és Pavilon) -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 5: Garden and pavilion -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" 
                     alt="Üppiger Garten mit Pavillon" 
@@ -157,151 +166,182 @@
                 />
             </div>
 
-            <!-- Bild 6: Solaranlage (Napelem Rendszer) -->
-            <div class="rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+            <!-- Image 6: Solar panel system -->
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
                     src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg" 
-                    alt="Die 12 kWh Solaranlage auf dem Dach" 
+                    alt="Die 12-kWh-Solaranlage auf dem Dach" 
                     class="gallery-item"
                 />
             </div>
         </div>
     </section>
 
-    <!-- Key Features Overview -->
+    <!-- Key Features Overview (Dynamic Cards) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-4xl font-bold text-center mb-12">Hauptmerkmale & Extras</h2>
+        <h2 class="text-4xl font-bold text-center mb-12">Schlüsselmerkmale und Komfort-Extras</h2>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <!-- Card 1: Multi-Generational -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-indigo-600">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-indigo-600 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Mehrgenerationenwohnen</h3>
                 <p class="text-gray-600">Nutzbar als zwei separate Wohneinheiten, insgesamt **220 qm** Wohnfläche, in der ruhigsten Straße des 18. Bezirks.</p>
             </div>
-            <!-- Card 2: Low Overhead -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500">
+            <!-- Card 2: Low Utilities -->
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Null Nebenkosten</h3>
-                <p class="text-gray-600">Heizung und Kühlung werden durch einen **12 kWh Solar-Park** bereitgestellt. **Noch 7 Jahre Nettoabrechnung**!</p>
+                <p class="text-gray-600">Heizung und Kühlung werden durch den **12-kWh-Solarpark** bereitgestellt. Noch **7 Jahre Net-Metering**!</p>
             </div>
             <!-- Card 3: Plot and Outbuilding -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
-                <h3 class="text-xl font-semibold mb-2">Riesiges Grundstück und Garage</h3>
-                <p class="text-gray-600">Über **1300 qm Grundstück**. Besonderes ca. **100 qm Nebengebäude** mit Doppelgarage.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-green-500 feature-card">
+                <h3 class="text-xl font-semibold mb-2">Riesiges Grundstück & Garage</h3>
+                <p class="text-gray-600">Über **1300 qm Grundstück**. Spezielles ca. **100 qm Nebengebäude** mit Doppelgarage.</p>
             </div>
             <!-- Card 4: Insulation -->
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
-                <h3 class="text-xl font-semibold mb-2">Premium Isolierung</h3>
-                <p class="text-gray-600">Volle **15 cm dicke Isolierung**, mit doppelter Isolierung im Dachgeschoss/Dach.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-blue-500 feature-card">
+                <h3 class="text-xl font-semibold mb-2">Premium-Isolierung</h3>
+                <p class="text-gray-600">Vollständige **15 cm dicke Isolierung**, mit doppelter Isolierung im Dachgeschoss.</p>
             </div>
         </div>
     </section>
 
     <!-- Outbuilding and Garden -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-lg shadow-inner mt-12">
-        <h2 class="text-4xl font-bold mb-6 text-indigo-700">Nebengebäude und Gartenparadies</h2>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 rounded-2xl shadow-inner mt-12">
+        <h2 class="text-4xl font-bold mb-6 text-indigo-700 text-center">Nebengebäude und Gartenparadies</h2>
         
+        <!-- Image: Outbuilding and garage -->
+        <div class="mb-10">
+            <img 
+                src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" 
+                alt="Das 100 qm große Nebengebäude, das in ein Büro oder eine Wohnung umgewandelt werden kann" 
+                class="w-full rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.01]"
+            />
+            <p class="text-center text-sm italic mt-2 text-gray-600">Das 100 qm große Nebengebäude mit Doppelgarage ist ideal für ein Gewerbe oder Gästehaus.</p>
+        </div>
+
         <div class="md:grid md:grid-cols-2 md:gap-12">
             <div>
-                <h3 class="text-3xl font-bold mb-3">Das Nebengebäude – Ideal für ein Geschäft</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>**100 qm Grundfläche**, Doppelgarage mit elektrischem Tor, doppelter Dachüberstand.</li>
-                    <li>2 Hobbyräume, WC, Dusche, Abstellraum und eine **Werkstatt mit Starkstrom**.</li>
-                    <li>**Außenbar** mit Schornsteinanschluss.</li>
-                    <li>Der **100 qm Dachboden** kann in eine Wohnung oder ein Büro umgewandelt werden.</li>
+                <h3 class="text-3xl font-bold mb-3 text-indigo-900">Das Nebengebäude – Ideal für Gewerbe</h3>
+                <ul class="list-none space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> **100 qm Grundfläche**, Doppelgarage mit elektrischem Tor.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> 2 Hobbyräume, Dusche, Abstellraum und **Werkstatt mit Starkstrom**.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> **Gartenbar** mit Kaminanschluss.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2 text-xl">&#10003;</span> Das **100 qm Dachgeschoss** kann zu einer Wohnung oder einem Büro ausgebaut werden.</li>
                 </ul>
             </div>
             <div class="mt-8 md:mt-0">
-                <h3 class="text-3xl font-bold mb-3">Garten und Umgebung</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>**Gegrabener Brunnen** mit ausgezeichneter Bewässerungswasserqualität.</li>
-                    <li>**16 qm überdachter Pavillon** und Feuerstelle/Grillplatz.</li>
-                    <li>**2000 Liter Regenwassersammler**.</li>
-                    <li>Der Garten ist zu 90% von einem Betonzaun umgeben, was Privatsphäre gewährleistet.</li>
+                <h3 class="text-3xl font-bold mb-3 text-indigo-900">Garten und Umgebung</h3>
+                <ul class="list-none space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **Gebohrter Brunnen** mit ausgezeichneter Bewässerungswasserqualität.</li>
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **16 qm überdachter Pavillon** und Grill-/Feuerstelle.</li>
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **2000 Liter Regenwassersammler**.</li>
+                    <li class="flex items-start"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Der Garten ist zu 90 % von einer Betonmauer umgeben, was absolute Privatsphäre gewährleistet.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Description - Ground Floor -->
+    <!-- Detailed Description - Ground Floor and Upper Floor (Dynamic Card Layout) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-4xl font-bold mb-6 text-center">Detaillierter Grundriss des Hauses</h2>
-        <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-yellow-500">
-            <h3 class="text-3xl font-bold text-yellow-700 mb-4">Erdgeschoss (110 qm, 2021 renoviert)</h3>
-            <p class="text-lg mb-4 italic">Vom Eingangsbereich aus bieten das offene Esszimmer, das Wohnzimmer mit **eingebautem Kamin** und das Bibliothek/Arbeitszimmer einen atemberaubenden Anblick.</p>
-            <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
-                <li class="p-2 border-b">2 geräumige Schlafzimmer (Klimaanlage, Laminatboden).</li>
-                <li class="p-2 border-b">Küche: Fußbodenheizung, neues **MIELE** Induktionskochfeld, Backofen, Geschirrspüler.</li>
-                <li class="p-2 border-b">Esszimmer: **6m Glaswand** mit Schiebetür zur überdachten Terrasse / Wintergarten.</li>
-                <li class="p-2 border-b">Badezimmer: Fußbodenheizung, Klimaanlage, Badewanne, Dusche, Doppelwaschbecken.</li>
-                <li class="p-2 border-b">Wohnzimmer: Eingebauter Kamin, Klimaanlage.</li>
-                <li class="p-2 border-b">Vorratsraum und separates WC.</li>
-            </ul>
-        </div>
-        
-        <!-- Detailed Description - Upper Floor -->
-        <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-500 mt-8">
-            <h3 class="text-3xl font-bold text-indigo-700 mb-4">Obergeschoss / Dachgeschoss (110 qm)</h3>
-            <p class="text-lg mb-4 italic">Fast **50 qm durchgehendes Wohnzimmer** mit Fußbodenheizung, Klimaanlage und Kamin.</p>
-            <ul class="grid sm:grid-cols-2 gap-4 text-gray-700">
-                <li class="p-2 border-b">Wohnzimmer: Ca. 50 qm, Klimaanlage, Kamin, Fußbodenheizung.</li>
-                <li class="p-2 border-b">**Mini-Wintergartenbalkon** mit fantastischer Aussicht auf die Budaer Berge und die Freiheitsstatue.</li>
-                <li class="p-2 border-b">Schlafzimmer und separater begehbarer Kleiderschrank (Klimaanlage, Fußbodenheizung).</li>
-                <li class="p-2 border-b">Küche: Voll ausgestattet (Ceranfeld, Geschirrspüler, Waschmaschine) mit Eckessbereich.</li>
-                <li class="p-2 border-b">Badezimmer: Fußbodenheizung, Badewanne, Dusche, WC.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Technical and Infrastructure -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-blue-50">
-        <h2 class="text-4xl font-bold mb-10 text-center">Heizung, Nebenkosten und Lage</h2>
-
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Heating and Overhead -->
-            <div>
-                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Grüne Heizlösungen</h3>
-                <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh Solaranlage:** Stellt die vollständige Stromversorgung (Kühlung, Heizung) sicher.</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **Noch 7 Jahre Nettoabrechnung** (extra niedrige Nebenkosten!).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Fußbodenheizung, Heizkörper, Vailant Zentralheizung (2021).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **6 Klimaanlagen** und 2 Kamine.</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Jährliche Produktion (2023): **1.38 MWh**.</li>
+        <h2 class="text-4xl font-bold mb-10 text-center text-gray-800">Detaillierte Aufteilung des Hauses</h2>
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Ground Floor (Left Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-yellow-500 feature-card">
+                <h3 class="text-3xl font-black text-yellow-700 mb-4 flex items-center">
+                    <!-- Icon for unified design -->
+                    <svg class="w-8 h-8 mr-3 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                    Erdgeschoss (110 qm)
+                </h3>
+                <p class="text-lg mb-6 italic text-gray-600">Komplett saniert (2021). Wohnzimmer mit Kamin, moderne MIELE-Küche, Fußbodenheizung.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Schlafzimmer:** 2 geräumige Zimmer (Klimaanlage, Laminat).</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Küche:** Fußbodenheizung, neue MIELE-Geräte.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Essbereich/Terrasse:** 6m Glaswand mit Schiebetür zum überdachten Wintergarten.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Wohnzimmer:** Eingebauter Kamin, Klimaanlage.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> **Badezimmer:** Fußbodenheizung, Badewanne, Dusche, Doppelwaschbecken.</li>
+                    <li class="flex items-start"><span class="text-yellow-500 font-extrabold mr-3 text-2xl">&#8227;</span> Speisekammer und separate Toilette.</li>
                 </ul>
             </div>
-
-            <!-- Infrastructure -->
-            <div>
-                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Premium Lage (Ganzkertváros)</h3>
-                <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#9992;</span> **Flughafen Liszt Ferenc: ca. 6 Minuten**
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#10148;</span> **Stadtzentrum: ca. 30 Minuten** (über 3 Routen)
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128663;</span> **Autobahnen (M0, M4, M5):** Innerhalb von 4-8 km erreichbar.
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#127976;</span> **Bildung:** Schule, staatlicher/privater Kindergarten, Kinderkrippe **innerhalb von 300m**!
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128717;</span> **Verkehr/Einkaufsmöglichkeiten:** Bus (300m), Straßenbahn (500m), Einkaufszentrum (1 km).
-                    </li>
+            
+            <!-- Upper Floor (Right Card) -->
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-indigo-600 feature-card">
+                <h3 class="text-3xl font-black text-indigo-700 mb-4 flex items-center">
+                    <!-- Icon for unified design -->
+                    <svg class="w-8 h-8 mr-3 text-indigo-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                    Obergeschoss / Dachgeschoss (110 qm)
+                </h3>
+                <p class="text-lg mb-6 italic text-gray-600">Fast 50 qm durchgehendes Wohnzimmer, Mini-Wintergarten-Balkon, Panorama-Blick auf die Budaer Berge.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Wohnzimmer:** Ca. 50 qm, Klimaanlage, Kamin, Fußbodenheizung.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Schlafzimmer:** Mit separatem begehbarem Kleiderschrank (Klimaanlage, Fußbodenheizung).</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Balkon:** Mini-Wintergarten, fantastische Aussicht.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Küche:** Voll ausgestattet, mit Eck-Essbereich.</li>
+                    <li class="flex items-start"><span class="text-indigo-600 font-extrabold mr-3 text-2xl">&#8227;</span> **Badezimmer:** Fußbodenheizung, Badewanne, Dusche, Toilette.</li>
                 </ul>
             </div>
         </div>
     </section>
+
+    <!-- REDESIGNED: Technical and Infrastructure Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-5xl font-extrabold mb-12 text-center text-indigo-700">
+            Finanzielle Intelligenz: Null Nebenkosten & Exzellente Lage
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- 1. Card: Energy Efficiency and Heating (Image on the left) -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-8 border-green-600 feature-card flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-2/5">
+                    <img
+                        src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg"
+                        alt="Die 12-kWh-Solaranlage auf dem Dach"
+                        class="w-full h-auto rounded-lg shadow-lg object-cover"
+                    />
+                </div>
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-3xl font-black mb-3 text-green-700">Energieunabhängigkeit</h3>
+                    <p class="mb-4 text-gray-600 font-medium">Vergessen Sie Nebenkosten! Das moderne, groß dimensionierte grüne Energiesystem garantiert nachhaltiges und kostenfreies Wohnen.</p>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh Solarpark:** Sichert die gesamte Stromversorgung.</li>
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **Net-Metering:** Garantiert Null Nebenkosten für weitere **7 Jahre**.</li>
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Heizung: Vailant-Kessel (2021), Fußbodenheizung, Heizkörper, **6 Klimaanlagen**, 2 Kamine.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Card: Location and Infrastructure (Image on the right) -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-8 border-blue-600 feature-card flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-2/5 order-last md:order-first">
+                    <h3 class="text-3xl font-black mb-3 text-blue-700">Strategische Lage</h3>
+                    <p class="mb-4 text-gray-600 font-medium">Die ruhige, sichere Straße von Ganzkertváros, in idealer Entfernung zu allem, was eine Familie braucht.</p>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Flughafen:** In 6 Minuten erreichbar.</li>
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Bildung:** Schule, Kindergarten, Krippe **innerhalb von 300m**!</li>
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Autobahnen (M0, M4):** In 5 Fahrminuten zugänglich.</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-3/5 order-first md:order-last">
+                    <!-- Image to highlight transportation aspect -->
+                    <img
+                        src="https://raw.githubusercontent.com/Mage1982/Oti/main/utcakep_terkep.jpg"
+                        alt="Blick auf die nahegelegene Straße oder Karte der Umgebung"
+                        class="w-full h-auto rounded-lg shadow-lg object-cover"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- REDESIGNED SECTION END -->
 
     <!-- CTA / Footer -->
     <footer class="hero-bg text-white py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-3xl sm:text-4xl font-bold mb-4">Verpassen Sie diese einmalige Gelegenheit nicht!</p>
+            <p class="text-3xl sm:text-4xl font-bold mb-4">Lassen Sie sich diese einmalige Gelegenheit nicht entgehen!</p>
             <p class="text-xl mb-6">Kontaktieren Sie uns noch heute für Details und zur Vereinbarung eines Besichtigungstermins.</p>
             
             <!-- CTA container for the two buttons (Phone and Facebook) -->
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <!-- Phone CTA - Hintergrundfarbe és szövegszín a korábbi módosításoknak megfelelően -->
+                <!-- Phone CTA -->
                 <a href="tel:+36204668282" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-black text-xl sm:text-2xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105">
                     Jetzt anrufen: +36 20 466 8282
                 </a>
@@ -310,7 +350,7 @@
                 <a href="https://www.facebook.com/lelovics.otto/posts/pfbid0jS9LofyvY1sQd6wUimq4ZwveYckKKDAo8FxtXz6HnhPnros6cPt7qXH7hjFurhoXl" 
                     target="_blank" 
                     class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
-                    <!-- Simple Facebook icon with SVG -->
+                    <!-- Simple Facebook icon SVG -->
                     <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M14 10H12V12H14V10ZM21.5 12C21.5 6.75 17.25 2.5 12 2.5C6.75 2.5 2.5 6.75 2.5 12C2.5 16.63 5.86 20.44 10.38 21.36V14.1H7.83V11.23H10.38V8.92C10.38 6.37 11.95 5.04 14.28 5.04C15.35 5.04 16.47 5.23 16.47 5.23V7.63H15.2C13.92 7.63 13.52 8.41 13.52 9.17V11.23H16.37L15.93 14.1H13.52V21.36C17.95 20.44 21.5 16.63 21.5 12Z" />
                     </svg>
@@ -318,21 +358,21 @@
                 </a>
             </div>
             
-            <p class="mt-8 text-sm text-gray-400">&copy; 2025 Immobilienanzeige. Alle Rechte vorbehalten.</p>
+            <p class="mt-8 text-sm text-gray-400">&copy; 2025 Immobilienangebot. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript to show/hide the language selector
+        // JavaScript to show/hide the language switcher
         const toggleButton = document.getElementById('lang-toggle-btn');
         const flagsContainer = document.getElementById('lang-flags');
 
-        // Main function: toggles flag visibility
+        // Main function: toggling the visibility of the languages
         toggleButton.addEventListener('click', () => {
             flagsContainer.classList.toggle('hidden');
         });
 
-        // Optional: Hides flags when the user clicks elsewhere
+        // Optional: hides the languages if the user clicks elsewhere
         document.addEventListener('click', (event) => {
             const isClickInside = document.getElementById('language-switcher').contains(event.target);
             
