@@ -26,6 +26,15 @@
             width: 100%;
             height: auto;
         }
+        /* Kiemelt kártya effekt a professzionális megjelenésért */
+        .feature-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(13, 50, 77, 0.15);
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -160,7 +169,7 @@
             <!-- Kép 6: Napelemes rendszer -->
             <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                 <img 
-                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg" 
+                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg" 
                     alt="A 12 kWh-s napelem rendszer a tetőn" 
                     class="gallery-item"
                 />
@@ -174,22 +183,22 @@
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <!-- Kártya 1: Több Generációs -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-indigo-600 transform transition duration-300 hover:scale-[1.05] hover:shadow-2xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-indigo-600 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Több Generációs Életforma</h3>
                 <p class="text-gray-600">Két külön lakóegységként is használható, összesen **220 nm** lakótér, a 18. kerület legcsendesebb utcájában.</p>
             </div>
             <!-- Kártya 2: Alacsony Rezsi -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500 transform transition duration-300 hover:scale-[1.05] hover:shadow-2xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Nulla Rezsi</h3>
                 <p class="text-gray-600">Fűtést és hűtést a **12 kWh-s napelem park** biztosítja. **7 év szaldós elszámolás** még hátra van!</p>
             </div>
             <!-- Kártya 3: Telek és Melléképület -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-green-500 transform transition duration-300 hover:scale-[1.05] hover:shadow-2xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-green-500 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Óriási Telek és Garázs</h3>
                 <p class="text-gray-600">Több mint **1300 nm-es telek**. Speciális kb. **100 nm-es melléképület** dupla garázzsal.</p>
             </div>
             <!-- Kártya 4: Szigetelés -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-blue-500 transform transition duration-300 hover:scale-[1.05] hover:shadow-2xl">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-blue-500 feature-card">
                 <h3 class="text-xl font-semibold mb-2">Prémium Szigetelés</h3>
                 <p class="text-gray-600">Teljes **15 cm vastag szigetelés**, a tetőtérben dupla szigeteléssel.</p>
             </div>
@@ -203,7 +212,7 @@
         <!-- Kép: Melléképület és garázs -->
         <div class="mb-10">
             <img 
-                src="https://raw.githubusercontent.com/Mage1982/Oti/main/9.jpg" 
+                src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" 
                 alt="A 100 nm-es melléképület, mely irodává vagy lakássá alakítható" 
                 class="w-full rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.01]"
             />
@@ -237,7 +246,7 @@
         <h2 class="text-4xl font-bold mb-10 text-center text-gray-800">A Ház Részletes Elrendezése</h2>
         <div class="grid lg:grid-cols-2 gap-8">
             <!-- Földszint (Left Card) -->
-            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-yellow-500 transition duration-500 transform hover:translate-y-[-4px] hover:shadow-3xl">
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-yellow-500 feature-card">
                 <h3 class="text-3xl font-black text-yellow-700 mb-4 flex items-center">
                     <!-- Ikon az egységes dizájnhoz -->
                     <svg class="w-8 h-8 mr-3 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
@@ -255,7 +264,7 @@
             </div>
             
             <!-- Emelet (Right Card) -->
-            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-indigo-600 transition duration-500 transform hover:translate-y-[-4px] hover:shadow-3xl">
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-indigo-600 feature-card">
                 <h3 class="text-3xl font-black text-indigo-700 mb-4 flex items-center">
                     <!-- Ikon az egységes dizájnhoz -->
                     <svg class="w-8 h-8 mr-3 text-indigo-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
@@ -273,59 +282,56 @@
         </div>
     </section>
 
-    <!-- Technikai és Infrastruktúra -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-blue-50">
-        <h2 class="text-4xl font-bold mb-10 text-center">Fűtés, Rezsi és Elhelyezkedés</h2>
+    <!-- ÚJRATERVEZETT: Technikai és Infrastruktúra -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-5xl font-extrabold mb-12 text-center text-indigo-700">
+            Pénzügyi Okosság: Nulla Rezsi & Kiváló Elhelyezkedés
+        </h2>
 
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Fűtés és Rezsi (Bal Oldal) -->
-            <div>
-                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Zöld Fűtési Megoldások</h3>
-                <!-- KÉP: Napelem Rendszer -->
-                <img
-                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg"
-                    alt="A tetőre szerelt 12 kWh teljesítményű napelem rendszer"
-                    class="w-full rounded-xl shadow-xl mb-6 transform transition duration-300 hover:scale-[1.03]"
-                />
-                <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh-s Napelem Rendszer:** Teljesen biztosítja az áramellátást (hűtés, fűtés).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **7 év szaldós elszámolás** még hátra van (extra alacsony rezsi!).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Padlófűtés, radiátorok, Vailant központi fűtés (2021).</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **6 klímaberendezés** és 2 kandalló.</li>
-                    <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Éves termelés (2023): **1.38 MWh**.</li>
-                </ul>
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- 1. Kártya: Energiatakarékosság és Fűtés (Kép a bal oldalon) -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-8 border-green-600 feature-card flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-2/5">
+                    <img
+                        src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg"
+                        alt="A tetőre szerelt 12 kWh teljesítményű napelem rendszer"
+                        class="w-full h-auto rounded-lg shadow-lg object-cover"
+                    />
+                </div>
+                <div class="w-full md:w-3/5">
+                    <h3 class="text-3xl font-black mb-3 text-green-700">Energetikai Függetlenség</h3>
+                    <p class="mb-4 text-gray-600 font-medium">Felejtse el a rezsiszámlákat! A korszerű, túlméretezett zöld energia rendszer garantálja a fenntartható és költségmentes életet.</p>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **12 kWh-s Napelem Park:** Teljes áramellátás.</li>
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> **Szaldós Elszámolás:** Még **7 évig** garantálja a rezsimentességet.</li>
+                        <li class="flex items-center"><span class="text-green-600 font-bold mr-2 text-xl">&#10003;</span> Fűtés: Vailant kazán (2021), padlófűtés, radiátor, **6 klíma**, 2 kandalló.</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Infrastruktúra (Jobb Oldal) -->
-            <div>
-                <h3 class="text-3xl font-semibold mb-4 text-blue-700">Prémium Elhelyezkedés (Ganzkertváros)</h3>
-                 <!-- KÉP: Ganzkertvárosi utcakép az elhelyezkedés kiemeléséhez -->
-                 <img
-                    src="https://raw.githubusercontent.com/Mage1982/Oti/main/28.jpg"
-                    alt="Csendes, kertvárosi utcakép Pestszentlőrincen"
-                    class="w-full rounded-xl shadow-xl mb-6 transform transition duration-300 hover:scale-[1.03]"
-                />
-                <ul class="list-none space-y-3 text-gray-700">
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#9992;</span> **Liszt Ferenc Repülőtér: kb. 6 perc**
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#10148;</span> **Városközpont: kb. 30 perc** (3 útvonalon keresztül)
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128663;</span> **Autópályák (M0, M4, M5):** 4-8 km távolságon belül elérhetőek.
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#127976;</span> **Oktatás:** Iskola, állami/magán óvoda, bölcsőde **300m-en belül**!
-                    </li>
-                    <li class="flex items-center">
-                        <span class="text-xl font-bold mr-2 text-red-500">&#128717;</span> **Közlekedés/Bevásárlás:** Busz (300m), Villamos (500m), Bevásárlóközpont (1 km).
-                    </li>
-                </ul>
+            <!-- 2. Kártya: Elhelyezkedés és Infrastruktúra (Kép a jobb oldalon) -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-8 border-blue-600 feature-card flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                <div class="w-full md:w-2/5 order-last md:order-first">
+                    <h3 class="text-3xl font-black mb-3 text-blue-700">Stratégiai Lokáció</h3>
+                    <p class="mb-4 text-gray-600 font-medium">Ganzkertváros csendes, biztonságos utcája, ideális távolságra mindentől, amire a családnak szüksége van.</p>
+                    <ul class="list-none space-y-2 text-gray-700">
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Repülőtér:** 6 perc alatt elérhető.</li>
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Oktatás:** Iskola, óvoda, bölcsőde **300m-en belül**!</li>
+                        <li class="flex items-center"><span class="text-blue-600 font-bold mr-2 text-xl">&#10148;</span> **Autópályák (M0, M4):** 5 perces autózással elérhető.</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-3/5 order-first md:order-last">
+                    <!-- Kép a közlekedési szempont kiemelésére -->
+                    <img
+                        src="https://raw.githubusercontent.com/Mage1982/Oti/main/utcakep_terkep.jpg"
+                        alt="Közeli utcakép vagy térkép a környékről"
+                        class="w-full h-auto rounded-lg shadow-lg object-cover"
+                    />
+                </div>
             </div>
         </div>
-        
     </section>
+    <!-- ÚJRATERVEZETT SZEKCIÓ VÉGE -->
 
     <!-- CTA / Lábléc -->
     <footer class="hero-bg text-white py-12 mt-12">
