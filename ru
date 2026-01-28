@@ -9,7 +9,7 @@
     <meta property="og:image" content="https://szep-haz-bp18.hu/1.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДОСТУПНАЯ РОСКОШЬ С НИЗКИМИ КОММУНАЛЬНЫМИ УСЛУГАМИ - Будапешт, XVIII район</title> 
+    <title>ДОСТУПНАЯ РОСКОШЬ - Будапешт, XVIII район</title> 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -61,17 +61,14 @@
     <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-5xl sm:text-7xl font-black mb-4">
-                <span class="highlight-text">ДОСТУПНАЯ РОСКОШЬ</span> С НУЛЕВЫМИ КОММУНАЛЬНЫМИ РАСХОДАМИ
+                <span class="highlight-text">ДОСТУПНАЯ РОСКОШЬ</span> С НУЛЕВЫМИ РАСХОДАМИ
             </h1>
             <p class="text-2xl sm:text-3xl font-light mb-8 max-w-4xl mx-auto">
-                ПРОДАЕТСЯ: Качественный семейный дом для нескольких поколений с уникальным расположением, флигелем, большим участком и солнечной электростанцией.
+                ПРОДАЕТСЯ: Качественный семейный дом с солнечной электростанцией и отличным расположением.
             </p>
             <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg">
                 <p class="text-3xl sm:text-5xl font-black text-gray-900">
-                    Будапешт, XVIII район, Ганцкертвар
-                </p>
-                <p class="text-xl sm:text-2xl font-medium text-gray-700 mt-1">
-                    5 минут до Международного аэропорта имени Ференца Листа
+                    Будапешт, XVIII район
                 </p>
             </div>
         </div>
@@ -80,7 +77,7 @@
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-12">
         <img 
             src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" 
-            alt="Вид на дом"
+            alt="View of the house"
             class="w-full rounded-2xl shadow-2xl border-4 border-white object-cover"
         />
     </section>
@@ -97,7 +94,7 @@
                 </div>
             </div>
             <a href="tel:+36204668282" class="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                СВЯЖИТЕСЬ С НАМИ СЕЙЧАС: +36 20 466 8282
+                СВЯЖИТЕСЬ С НАМИ: +36 20 466 8282
             </a>
         </div>
     </section>
@@ -105,24 +102,12 @@
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
         <h2 class="text-5xl font-extrabold text-center text-indigo-700 mb-10">Галерея</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" alt="Exterior" class="gallery-item"/>
-            </div>
-            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" alt="Living room" class="gallery-item"/>
-            </div>
-            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" alt="Kitchen" class="gallery-item"/>
-            </div>
-            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" alt="Garage" class="gallery-item"/>
-            </div>
-            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" alt="Garden" class="gallery-item"/>
-            </div>
-            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
-                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg" alt="Solar" class="gallery-item"/>
-            </div>
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" class="gallery-item rounded-xl shadow-lg" alt="Exterior"/>
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" class="gallery-item rounded-xl shadow-lg" alt="Living room"/>
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" class="gallery-item rounded-xl shadow-lg" alt="Kitchen"/>
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" class="gallery-item rounded-xl shadow-lg" alt="Garage"/>
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" class="gallery-item rounded-xl shadow-lg" alt="Garden"/>
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg" class="gallery-item rounded-xl shadow-lg" alt="Solar"/>
         </div>
     </section>
 
@@ -132,9 +117,6 @@
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
                 <a href="tel:+36204668282" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-black text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105">
                     +36 20 466 8282
-                </a>
-                <a href="https://wa.me/436607960021" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
-                    WhatsApp
                 </a>
             </div>
             <p class="mt-8 text-sm text-gray-400">&copy; 2026 Property Listing. Все права защищены.</p>
