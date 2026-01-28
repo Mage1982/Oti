@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://szep-haz-bp18.hu/" />
+    <meta property="og:title" content="ДОСТУПНАЯ РОСКОШЬ С НИЗКИМИ КОММУНАЛЬНЫМИ УСЛУГАМИ - Будапешт, XVIII район" />
+    <meta property="og:description" content="Качественный семейный дом для нескольких поколений с уникальным расположением, флигелем и солнечной электростанцией." />
+    <meta property="og:image" content="https://szep-haz-bp18.hu/1.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДОСТУПНАЯ РОСКОШЬ С НИЗКИМИ КОММУНАЛЬНЫМИ УСЛУГАМИ Объявление о недвижимости - Будапешт, XVIII район</title> 
+    <title>ДОСТУПНАЯ РОСКОШЬ С НИЗКИМИ КОММУНАЛЬНЫМИ УСЛУГАМИ - Будапешт, XVIII район</title> 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -46,9 +52,9 @@
         
         <div id="lang-flags" class="hidden flex space-x-1 p-2 bg-white rounded-xl shadow-2xl border border-gray-100">
             <a href="index.html" title="Magyar" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">HU</a>
-            <a href="GB.html" title="Angol" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
-            <a href="de.html" title="Német" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
-            <a href="ru.html" title="Orosz" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">RU</a>
+            <a href="GB.html" title="English" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
+            <a href="de.html" title="Deutsch" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
+            <a href="ru.html" title="Russian" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">RU</a>
         </div>
     </div>
 
@@ -58,7 +64,95 @@
                 <span class="highlight-text">ДОСТУПНАЯ РОСКОШЬ</span> С НУЛЕВЫМИ КОММУНАЛЬНЫМИ РАСХОДАМИ
             </h1>
             <p class="text-2xl sm:text-3xl font-light mb-8 max-w-4xl mx-auto">
-                ПРОДАЕТСЯ: Качественный семейный дом для нескольких поколений с уникальным расположением, флигелем, большим участком и **солнечной электростанцией**.
+                ПРОДАЕТСЯ: Качественный семейный дом для нескольких поколений с уникальным расположением, флигелем, большим участком и солнечной электростанцией.
             </p>
             <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg">
-                <p class
+                <p class="text-3xl sm:text-5xl font-black text-gray-900">
+                    Будапешт, XVIII район, Ганцкертвар
+                </p>
+                <p class="text-xl sm:text-2xl font-medium text-gray-700 mt-1">
+                    5 минут до Международного аэропорта имени Ференца Листа
+                </p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-12">
+        <img 
+            src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" 
+            alt="Вид на дом"
+            class="w-full rounded-2xl shadow-2xl border-4 border-white object-cover"
+        />
+    </section>
+
+    <section class="py-12 bg-white border-t border-b border-gray-200">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl sm:text-6xl font-extrabold text-red-600 mb-6">
+                ВАШ НОВЫЙ ДОМ: ВСЕГО ЗА
+            </h2>
+            <div class="flex justify-center">
+                <div class="p-6 sm:p-10 bg-red-100 rounded-2xl shadow-xl border-2 border-red-200">
+                    <p class="text-2xl font-bold text-red-700 mb-2">ЦЕНА В ЕВРО</p>
+                    <p class="text-6xl sm:text-8xl font-black text-red-600">780.000,-</p>
+                </div>
+            </div>
+            <a href="tel:+36204668282" class="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                СВЯЖИТЕСЬ С НАМИ СЕЙЧАС: +36 20 466 8282
+            </a>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
+        <h2 class="text-5xl font-extrabold text-center text-indigo-700 mb-10">Галерея</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" alt="Exterior" class="gallery-item"/>
+            </div>
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" alt="Living room" class="gallery-item"/>
+            </div>
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" alt="Kitchen" class="gallery-item"/>
+            </div>
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" alt="Garage" class="gallery-item"/>
+            </div>
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" alt="Garden" class="gallery-item"/>
+            </div>
+            <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg" alt="Solar" class="gallery-item"/>
+            </div>
+        </div>
+    </section>
+
+    <footer class="hero-bg text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-3xl sm:text-4xl font-bold mb-4">Не упустите возможность!</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
+                <a href="tel:+36204668282" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-black text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105">
+                    +36 20 466 8282
+                </a>
+                <a href="https://wa.me/436607960021" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 border border-white">
+                    WhatsApp
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-gray-400">&copy; 2026 Property Listing. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('lang-toggle-btn');
+        const flagsContainer = document.getElementById('lang-flags');
+        toggleButton.addEventListener('click', () => {
+            flagsContainer.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            const isClickInside = document.getElementById('language-switcher').contains(event.target);
+            if (!isClickInside && !flagsContainer.classList.contains('hidden')) {
+                flagsContainer.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
