@@ -1,160 +1,161 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://szep-haz-bp18.online/" />
-    <meta property="og:title" content="MEGELHETŐ LUXUS KIS REZSIVEL Ingatlanhirdetés - Budapest XVIII. Kerület" />
-    <meta property="og:description" content="Kiváló állapotú, energiatakarékos családi ház a 18. kerületben eladó. Alacsony rezsi, napfényes terasz, dupla garázs. Ideális választás." />
-    <meta property="og:image" content="http://szep-haz-bp18.online/1.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEGÉLHETŐ LUXUS KIS REZSIVEL Ingatlanhirdetés - Budapest XVIII. Kerület</title>
+    <title>!!! ÚJ ÁR !!! MEGÉLHETŐ LUXUS - Budapest XVIII.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb;
-        }
-        .hero-bg {
-            background-color: #0d324d;
-        }
-        .highlight-text {
-            color: #ffcc00;
-        }
-        .gallery-item {
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            width: 100%;
-            height: auto;
-        }
-        .feature-card {
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(13, 50, 77, 0.15);
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .hero-gradient { background: linear-gradient(135deg, #0d324d 0%, #111827 100%); }
+        .gold-text { color: #fbbf24; }
+        .gallery-img { aspect-ratio: 4/3; object-fit: cover; width: 100%; transition: transform 0.3s ease; }
+        .gallery-img:hover { transform: scale(1.05); }
+        .badge { background: #dc2626; color: white; padding: 4px 12px; rounded-full: 9999px; font-weight: bold; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-900">
 
-    <div id="language-switcher" class="fixed top-4 right-4 z-50 flex flex-col items-end">
-        <button id="lang-toggle-btn" title="Nyelv kiválasztása" class="p-3 bg-white rounded-full shadow-2xl transition duration-300 transform hover:scale-110 mb-2 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-indigo-300">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-indigo-600">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 2a14.5 14.5 0 0 0 0 20"></path>
-                <path d="M2 12h20"></path>
+    <div id="language-switcher" class="fixed top-4 right-4 z-50">
+        <button id="lang-toggle-btn" class="p-3 bg-white rounded-full shadow-2xl border border-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h18" />
             </svg>
         </button>
-        <div id="lang-flags" class="hidden flex space-x-1 p-2 bg-white rounded-xl shadow-2xl border border-gray-100">
-            <a href="index.html" title="Magyar" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">HU</a>
-            <a href="GB.html" title="Angol" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">EN</a>
-            <a href="de.html" title="Német" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">DE</a>
-            <a href="ru.html" title="Orosz" class="font-semibold text-sm px-3 py-1 rounded-lg text-indigo-600 hover:bg-indigo-100 transition duration-200">RU</a>
+        <div id="lang-flags" class="hidden absolute right-0 mt-2 p-2 bg-white rounded-xl shadow-2xl border flex space-x-2">
+            <a href="index.html" class="px-3 py-1 hover:bg-gray-100 rounded">HU</a>
+            <a href="GB.html" class="px-3 py-1 hover:bg-gray-100 rounded">EN</a>
+            <a href="de.html" class="px-3 py-1 hover:bg-gray-100 rounded">DE</a>
         </div>
     </div>
 
-    <header class="hero-bg text-white py-12 sm:py-24 shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-7xl font-black mb-4 leading-tight">
-                <span class="highlight-text">MEGÉLHETŐ LUXUS</span><br class="sm:hidden"> KIS REZSIVEL
+    <header class="hero-gradient text-white py-12 sm:py-20 px-4 text-center">
+        <div class="max-w-5xl mx-auto">
+            <div class="inline-block badge mb-4 text-sm sm:text-base">!!! ÚJ ÁR - PRIVÁT KIÁRUSÍTÁS !!!</div>
+            <h1 class="text-4xl sm:text-6xl font-black mb-6 leading-tight">
+                AZONNAL VIHETŐ <br><span class="gold-text text-3xl sm:text-5xl">1300 m²-ES KERTI OÁZIS</span>
             </h1>
-            <p class="text-lg sm:text-3xl font-light mb-8 max-w-4xl mx-auto px-2">
-                ELADÓ: Minőségi, több generációs családi ház egyedülálló elhelyezkedéssel, melléképülettel és napelemrendszerrel.
+            <p class="text-lg sm:text-2xl font-light mb-8 opacity-90">
+                Budapest XVIII., Ganzkertváros - Csendes mellékutca, nulla rezsi, dupla garázs.
             </p>
-            <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg mx-2">
-                <p class="text-xl sm:text-5xl font-black text-gray-900">
-                    Budapest, XVIII. Kerület, Ganzkertváros
-                </p>
-                <p class="text-lg sm:text-2xl font-medium text-gray-700 mt-1">
-                    5 percre a Repülőtértől
-                </p>
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20 inline-block">
+                <p class="text-gray-300 text-sm uppercase tracking-widest mb-1">Irányár</p>
+                <p class="text-5xl sm:text-7xl font-black gold-text">780.000 €</p>
             </div>
         </div>
     </header>
-    
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-12 mb-12">
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" alt="A főépület" class="w-full rounded-2xl shadow-2xl border-4 border-white object-cover" />
-    </section>
 
-    <section class="py-12 bg-white border-t border-b border-gray-200">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
-            <h2 class="text-3xl sm:text-6xl font-extrabold text-red-600 mb-6">
-                AZ ÖN ÚJ OTTHONA:
-            </h2>
-            <div class="flex justify-center">
-                <div class="p-6 sm:p-8 bg-red-100 rounded-2xl shadow-lg inline-block min-w-[280px]">
-                    <p class="text-xl font-semibold text-red-700 mb-2">IRÁNYÁR</p>
-                    <p class="text-5xl sm:text-8xl font-black text-red-600">780.000 €</p>
-                </div>
+    <section class="max-w-7xl mx-auto px-4 -mt-10 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-indigo-500">
+                <span class="block text-2xl mb-1">🏠</span>
+                <span class="block font-bold text-lg">220 m²</span>
+                <span class="text-xs text-gray-500 uppercase">Élettér</span>
             </div>
-            <a href="tel:+36204668282" class="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg">
-                ÉRDEKLŐDJÖN MOST: +36 20 466 8282
-            </a>
-        </div>
-    </section>
-
-   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
-    <h2 class="text-3xl sm:text-5xl font-extrabold text-center text-indigo-700 mb-10">
-        Galéria
-    </h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-8">
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" class="gallery-item rounded-xl shadow-lg" alt="Kültér" />
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" class="gallery-item rounded-xl shadow-lg" alt="Nappali" />
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" class="gallery-item rounded-xl shadow-lg" alt="Konyha" />
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" class="gallery-item rounded-xl shadow-lg" alt="Melléképület" />
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" class="gallery-item rounded-xl shadow-lg" alt="Kert" />
-        <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg" class="gallery-item rounded-xl shadow-lg" alt="Napelem" />
-    </div>
-    <div class="text-center mt-10">
-        <a href="https://www.facebook.com/media/set/?vanity=lelovics.otto&set=a.10224380265972951" target="_blank" class="inline-block bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-4 px-8 rounded-full shadow-xl transition duration-300">
-            Összes kép megnyitása (FB)
-        </a>
-    </div>
-</section>
-
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-indigo-600 feature-card">
-                <h3 class="text-xl font-bold mb-2">220 m² lakótér</h3>
-                <p class="text-gray-600 text-sm">Két külön lakóegységként is használható, többgenerációs kialakítás.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-green-500">
+                <span class="block text-2xl mb-1">🌳</span>
+                <span class="block font-bold text-lg">1300 m²</span>
+                <span class="text-xs text-gray-500 uppercase">Telek</span>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 feature-card">
-                <h3 class="text-xl font-bold mb-2">Nulla rezsi</h3>
-                <p class="text-gray-600 text-sm">12 kWh napelempark, még 7 év szaldós elszámolással!</p>
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-yellow-500">
+                <span class="block text-2xl mb-1">☀️</span>
+                <span class="block font-bold text-lg">12 kWh</span>
+                <span class="text-xs text-gray-500 uppercase">Napelem</span>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-500 feature-card">
-                <h3 class="text-xl font-bold mb-2">1300 m² telek</h3>
-                <p class="text-gray-600 text-sm">Hatalmas kert, fúrt kút és 100 m²-es melléképület dupla garázzsal.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-blue-500 feature-card">
-                <h3 class="text-xl font-bold mb-2">Prémium szigetelés</h3>
-                <p class="text-gray-600 text-sm">15 cm homlokzati és dupla födém szigetelés a hatékonyságért.</p>
+            <div class="bg-white p-6 rounded-2xl shadow-xl text-center border-b-4 border-blue-500">
+                <span class="block text-2xl mb-1">🚗</span>
+                <span class="block font-bold text-lg">320 m²</span>
+                <span class="text-xs text-gray-500 uppercase">Össz terület</span>
             </div>
         </div>
     </section>
 
-    <footer class="hero-bg text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-2xl sm:text-4xl font-bold mb-8">Vegye fel velünk a kapcsolatot!</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="tel:+36204668282" class="w-full sm:w-auto bg-red-600 py-4 px-8 rounded-full font-black text-xl shadow-lg">Hívás: +36 20 466 8282</a>
-                <a href="https://wa.me/436607960021" target="_blank" class="w-full sm:w-auto bg-green-500 py-4 px-8 rounded-full font-bold text-xl shadow-lg">WhatsApp</a>
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-black mb-8 text-center uppercase tracking-tighter">Teljes Fotódokumentáció</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" class="gallery-img rounded-lg shadow-md" alt="Ingatlan 1">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" class="gallery-img rounded-lg shadow-md" alt="Ingatlan 2">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/3.jpg" class="gallery-img rounded-lg shadow-md" alt="Ingatlan 3">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/4.jpg" class="gallery-img rounded-lg shadow-md" alt="Ingatlan 4">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/5.jpg" class="gallery-img rounded-lg shadow-md" alt="Ingatlan 5">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/6.jpg" class="gallery-img rounded-lg shadow-md" alt="Ingatlan 6">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" class="gallery-img rounded-lg shadow-md" alt="Belső 10">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/11.jpg" class="gallery-img rounded-lg shadow-md" alt="Belső 11">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" class="gallery-img rounded-lg shadow-md" alt="Belső 12">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/13.jpg" class="gallery-img rounded-lg shadow-md" alt="Belső 13">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/14.jpg" class="gallery-img rounded-lg shadow-md" alt="Belső 14">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/19.jpg" class="gallery-img rounded-lg shadow-md" alt="Kert 19">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/29.jpg" class="gallery-img rounded-lg shadow-md" alt="Garázs 29">
+            <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/9.jpg" class="gallery-img rounded-lg shadow-md" alt="Alaprajz/Melléképület">
             </div>
-            <p class="mt-10 text-gray-400 text-xs">&copy; 2026 Ingatlan hirdetés.</p>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-12 bg-white rounded-3xl shadow-sm mb-12">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-black text-indigo-900 mb-4 border-l-4 border-indigo-500 pl-4">Földszint (110 m²)</h3>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed">2021-ben teljesen felújítva. Nyitott, világos terek, kandallós nappali és modern Miele konyha.</p>
+                <ul class="space-y-2 text-sm">
+                    <li>✅ 2 klímás hálószoba</li>
+                    <li>✅ Miele gépek (indukciós főzőlap, mosogatógép)</li>
+                    <li>✅ Könyvtár / dolgozószoba</li>
+                    <li>✅ Fürdő káddal és zuhanyzóval</li>
+                    <li>✅ Télikert és redőnyözött ablakok</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-2xl font-black text-indigo-900 mb-4 border-l-4 border-indigo-500 pl-4">Emelet (110 m²)</h3>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed">Külön lakóegységként is használható. 50 m²-es nappali nagy svéd kályhával.</p>
+                <ul class="space-y-2 text-sm">
+                    <li>✅ Klímás hálószoba + Gardrób</li>
+                    <li>✅ Fedett erkély kertre néző panorámával</li>
+                    <li>✅ Teljesen felszerelt konyha</li>
+                    <li>✅ 120 m²-es, dupla szigetelt padlástér</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-100">
+            <h3 class="text-xl font-bold mb-4">Műszaki extrák & Melléképület</h3>
+            <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                <ul class="space-y-2">
+                    <li>🚗 <strong>Melléképület (100 m²):</strong> Dupla garázs, műhely ipari árammal, 2 hobbiszoba.</li>
+                    <li>⚡ <strong>Energia:</strong> 12 kWh napelem (szaldó elszámolás még 8 évig!)</li>
+                    <li>🔥 <strong>Fűtés:</strong> Vaillant gázkazán (2021), padlófűtés, falfűtés és 2 kandalló.</li>
+                </ul>
+                <ul class="space-y-2">
+                    <li>💧 <strong>Kert:</strong> Fúrt kút, 2000L esővíztároló, 16m² pavilon.</li>
+                    <li>📍 <strong>Helyszín:</strong> Repülőtér 8 perc, Spar/Iskola 300-800m.</li>
+                    <li>🤫 <strong>Környezet:</strong> Abszolút nyugalom, város széle, zöldövezet.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="hero-gradient text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-black mb-8">Érdeklődjön közvetlenül a tulajdonostól!</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+36204668282" class="bg-red-600 hover:bg-red-700 text-white font-black py-4 px-8 rounded-full text-xl transition transform hover:scale-105">
+                    📞 +36 20 466 8282
+                </a>
+                <a href="https://wa.me/436607960021" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-xl transition transform hover:scale-105">
+                    WhatsApp (AT)
+                </a>
+            </div>
+            <p class="mt-12 text-gray-400 text-sm italic">
+                Eladási ár: 780.000 EUR + jogi díjak és állami adók. <br>
+                &copy; 2026 - Privát Ingatlanértékesítés
+            </p>
         </div>
     </footer>
 
     <script>
-        const toggleButton = document.getElementById('lang-toggle-btn');
-        const flagsContainer = document.getElementById('lang-flags');
-        toggleButton.addEventListener('click', () => flagsContainer.classList.toggle('hidden'));
-        document.addEventListener('click', (e) => {
-            if (!document.getElementById('language-switcher').contains(e.target)) flagsContainer.classList.add('hidden');
-        });
+        const btn = document.getElementById('lang-toggle-btn');
+        const list = document.getElementById('lang-flags');
+        btn.addEventListener('click', () => list.classList.toggle('hidden'));
     </script>
 </body>
 </html>
