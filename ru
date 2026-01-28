@@ -3,8 +3,8 @@
 <head>
     <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://szep-haz-bp18.hu/" />
-    <meta property="og:title" content="ДОСТУПНАЯ РОСКОШЬ С НИЗКИМИ КОММУНАЛЬНЫМИ УСЛУГАМИ - Будапешт, XVIII район" />
+    <meta property="og:url" content="https://szep-haz-bp18.hu/ru.html" />
+    <meta property="og:title" content="ДОСТУПНАЯ РОСКОШЬ - Будапешт, XVIII район" />
     <meta property="og:description" content="Качественный семейный дом для нескольких поколений с уникальным расположением, флигелем и солнечной электростанцией." />
     <meta property="og:image" content="https://szep-haz-bp18.hu/1.jpg" />
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f7f9fb;
+            overflow-x: hidden; /* Megakadályozza az oldalsó görgetést mobilon */
         }
         .hero-bg {
             background-color: #0d324d;
@@ -58,23 +59,23 @@
         </div>
     </div>
 
-    <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
+    <header class="hero-bg text-white py-12 sm:py-24 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl sm:text-7xl font-black mb-4">
-                <span class="highlight-text">ДОСТУПНАЯ РОСКОШЬ</span> С НУЛЕВЫМИ РАСХОДАМИ
+            <h1 class="text-3xl sm:text-6xl lg:text-7xl font-black mb-4 leading-tight">
+                <span class="highlight-text">ДОСТУПНАЯ РОСКОШЬ</span><br class="sm:hidden"> С НУЛЕВЫМИ РАСХОДАМИ
             </h1>
-            <p class="text-2xl sm:text-3xl font-light mb-8 max-w-4xl mx-auto">
-                ПРОДАЕТСЯ: Качественный семейный дом с солнечной электростанцией и отличным расположением.
+            <p class="text-xl sm:text-2xl lg:text-3xl font-light mb-8 max-w-4xl mx-auto">
+                ПРОДАЕТСЯ: Качественный семейный дом с солнечной электростанцией.
             </p>
             <div class="bg-yellow-400 p-4 sm:p-6 rounded-xl inline-block shadow-lg">
-                <p class="text-3xl sm:text-5xl font-black text-gray-900">
+                <p class="text-2xl sm:text-4xl lg:text-5xl font-black text-gray-900">
                     Будапешт, XVIII район
                 </p>
             </div>
         </div>
     </header>
     
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 mb-12">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-12 mb-12">
         <img 
             src="https://raw.githubusercontent.com/Mage1982/Oti/main/1.jpg" 
             alt="View of the house"
@@ -84,13 +85,13 @@
 
     <section class="py-12 bg-white border-t border-b border-gray-200">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl sm:text-6xl font-extrabold text-red-600 mb-6">
-                ВАШ НОВЫЙ ДОМ: ВСЕГО ЗА
+            <h2 class="text-3xl sm:text-6xl font-extrabold text-red-600 mb-6 uppercase">
+                Ваш новый дом всего за:
             </h2>
             <div class="flex justify-center">
                 <div class="p-6 sm:p-10 bg-red-100 rounded-2xl shadow-xl border-2 border-red-200">
-                    <p class="text-2xl font-bold text-red-700 mb-2">ЦЕНА В ЕВРО</p>
-                    <p class="text-6xl sm:text-8xl font-black text-red-600">780.000,-</p>
+                    <p class="text-xl sm:text-2xl font-bold text-red-700 mb-2">ЦЕНА В ЕВРО</p>
+                    <p class="text-5xl sm:text-8xl font-black text-red-600">780.000,-</p>
                 </div>
             </div>
             <a href="tel:+36204668282" class="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
@@ -100,8 +101,8 @@
     </section>
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
-        <h2 class="text-5xl font-extrabold text-center text-indigo-700 mb-10">Галерея</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-indigo-700 mb-10">Галерея</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
             <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/2.jpg" class="gallery-item rounded-xl shadow-lg" alt="Exterior"/>
             <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/10.jpg" class="gallery-item rounded-xl shadow-lg" alt="Living room"/>
             <img src="https://raw.githubusercontent.com/Mage1982/Oti/main/12.jpg" class="gallery-item rounded-xl shadow-lg" alt="Kitchen"/>
@@ -113,7 +114,7 @@
 
     <footer class="hero-bg text-white py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-3xl sm:text-4xl font-bold mb-4">Не упустите возможность!</p>
+            <p class="text-2xl sm:text-4xl font-bold mb-4">Не упустите возможность!</p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
                 <a href="tel:+36204668282" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-black text-xl py-3 px-6 rounded-full shadow-2xl transition duration-300 transform hover:scale-105">
                     +36 20 466 8282
