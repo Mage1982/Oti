@@ -65,7 +65,7 @@
             <p class="text-base sm:text-xl font-light mb-8 opacity-90 italic">Будапешт XVIII. – Тихая улица, зеленая зона</p>
             <div class="mb-8 py-6 border-y border-white/20">
                 <p class="text-xs uppercase tracking-widest opacity-70 mb-2">Цена продажи</p>
-                <p class="text-5xl sm:text-8xl gold-price">780.000 €</p>
+                <p class="text-5xl sm:text-8xl gold-price">700.000 €</p>
             </div>
             <div class="flex flex-col gap-4 justify-center items-center">
                 <a href="https://wa.me/436607960021" target="_blank" class="whatsapp-glow w-full sm:w-auto bg-green-500 text-white font-black py-5 px-12 rounded-full hover:bg-green-600 transition-all uppercase text-sm flex items-center justify-center gap-3">
@@ -162,7 +162,7 @@
                 <a href="tel:+36204668282" class="text-gray-400 hover:text-white transition">Будапешт: +36 20 466 8282</a>
             </div>
             <p class="mt-20 text-gray-500 text-[10px] uppercase tracking-widest italic">
-                780.000 € + юридические услуги и налоги <br>
+                700.000 € + юридические услуги и налоги <br>
                 &copy; 2026 - Недвижимость Будапешт XVIII.
             </p>
         </div>
